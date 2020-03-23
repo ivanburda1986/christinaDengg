@@ -1,5 +1,5 @@
-$color: pink;
+@import 'variables';
 
 body {
-  background: $color;
+  background: $backgroundColor;
 }
