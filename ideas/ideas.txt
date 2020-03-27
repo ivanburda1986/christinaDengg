@@ -8,8 +8,16 @@ Gallery - a few pictures and a button to go to instagram
 
 ========SECTIONS=======
 Frontpage:
+-A short video will play automatically, overlayed by
+--a transparent grey layer
+--Christina Dengg
+--Poledance instructor, vegan, nutritional scientist
+--watch a performance button to play a full video
+
 
 About me:
+-a photo fades in
+-a text about Christina fades in
 
 Poledance:
 -Why to start
@@ -20,8 +28,8 @@ Gallery:
 
 
 Social media links
-FB
-Inst
+-Facebook icon
+-Instagram icon
 
 
 
