@@ -1,4 +1,4 @@
-/* Color Theme Swatches in Hex */
+/* Variables */
 /* Color Theme Swatches in RGBA */
 /*
 .color-theme_fish-1-rgba { color: rgba(217, 4, 4, 1); }
@@ -7,5 +7,53 @@
 .color-theme_fish-4-rgba { color: rgba(64, 1, 1, 1); }
 .color-theme_fish-5-rgba { color: rgba(13, 13, 13, 1); }
 */
+.container {
+  max-width: 1280px; }
+
+.section {
+  min-height: 100vh; }
+
+/*General styles*/
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
-  background: #0D0D0D; }
+  font-family: "Lora", sans-serif;
+  line-height: 1.6;
+  background: #000;
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2; }
+
+ul {
+  display: flex; }
+
+li {
+  padding: 1rem 1.5rem;
+  text-transform: uppercase; }
+
+#section-frontpage {
+  background: url("../img/frontpage-background-landscape.jpg") no-repeat center right/cover;
+  z-index: 0; }
+  #section-frontpage::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.624); }
