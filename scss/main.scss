@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora', serif;
   line-height: 1.6;
   background: $backgroundDarkColor;
   scroll-behavior: smooth;
@@ -31,32 +31,56 @@ img {
 // Navigation
 #main-nav {
   display: flex;
-  justify-content: space-between;
-  z-index: 2;
+
+  ul {
+    display: flex;
+    margin-left: 40%;
+
+    li {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+    }
+  }
 }
 
-ul {
-  display: flex;
-}
 
-li {
-  padding: 1rem 1.5rem;
-  text-transform: uppercase;
-}
 
-//Frontpage
-#section-frontpage {
+
+
+//Werlcome
+#section-welcome {
   background: $bg-image no-repeat center right / cover;
-  z-index: 0;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
+  #background {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.624);
+    background: rgba(0, 0, 0, 0.624);
+
+
+    #welcome-titles {
+      position: relative;
+      margin-top: 30%;
+      padding-left: 10%;
+
+      #welcome-title {
+        font-family: inherit;
+        font-size: 5rem;
+        font-weight: 800;
+        color: $textColor;
+      }
+
+      #welcome-subtitle {
+        font-size: 3rem;
+        font-family: 'Sacramento', cursive;
+        font-weight: 800;
+        color: $dominantColor;
+      }
+    }
+
   }
 }
 

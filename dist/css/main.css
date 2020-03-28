@@ -8,7 +8,7 @@
 .color-theme_fish-5-rgba { color: rgba(13, 13, 13, 1); }
 */
 .container {
-  max-width: 1280px; }
+  max-width: 100vw; }
 
 .section {
   min-height: 100vh; }
@@ -19,14 +19,14 @@
   padding: 0; }
 
 body {
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora', serif;
   line-height: 1.6;
   background: #000;
   scroll-behavior: smooth; }
 
 a {
   text-decoration: none;
-  color: #fff; }
+  color: #dedede; }
 
 ul {
   list-style: none; }
@@ -35,25 +35,35 @@ img {
   width: 100%; }
 
 #main-nav {
-  display: flex;
-  justify-content: space-between;
-  z-index: 2; }
-
-ul {
   display: flex; }
+  #main-nav ul {
+    display: flex;
+    margin-left: 40%; }
+    #main-nav ul li {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem; }
 
-li {
-  padding: 1rem 1.5rem;
-  text-transform: uppercase; }
-
-#section-frontpage {
-  background: url("../img/frontpage-background-landscape.jpg") no-repeat center right/cover;
-  z-index: 0; }
-  #section-frontpage::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
+#section-welcome {
+  background: url("../img/frontpage-background-landscape.jpg") no-repeat center right/cover; }
+  #section-welcome #background {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.624); }
+    background: rgba(0, 0, 0, 0.624); }
+    #section-welcome #background #welcome-titles {
+      position: relative;
+      margin-top: 30%;
+      padding-left: 10%; }
+      #section-welcome #background #welcome-titles #welcome-title {
+        font-family: inherit;
+        font-size: 5rem;
+        font-weight: 800;
+        color: #dedede; }
+      #section-welcome #background #welcome-titles #welcome-subtitle {
+        font-size: 3rem;
+        font-family: 'Sacramento', cursive;
+        font-weight: 800;
+        color: #900000; }
