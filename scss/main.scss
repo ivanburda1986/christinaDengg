@@ -1,6 +1,5 @@
-@import 'config';
-@import 'utilities';
-
+@import "config";
+@import "utilities";
 
 /*General styles*/
 * {
@@ -9,8 +8,9 @@
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   line-height: 1.6;
+  color: $textColor;
   background: $backgroundDarkColor;
   scroll-behavior: smooth;
 }
@@ -18,6 +18,14 @@ body {
 a {
   text-decoration: none;
   color: $textColor;
+
+  &:hover {
+    color: $dominantColor;
+  }
+
+  &.current {
+    color: $dominantColor;
+  }
 }
 
 ul {
@@ -31,27 +39,28 @@ img {
 // Navigation
 #main-nav {
   display: flex;
+  min-height: 3rem;
 
   ul {
     display: flex;
     margin-left: 40%;
 
     li {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 0.8rem;
       text-transform: uppercase;
       padding: 1rem 1.5rem;
     }
+
+    .social-media-link {
+      padding-top: 0.75rem;
+    }
   }
 }
 
-
-
-
-
-//Werlcome
+//Welcome
 #section-welcome {
-  background: $bg-image no-repeat center right / cover;
+  background: $bg-image no-repeat center center / cover;
 
   #background {
     display: flex;
@@ -60,30 +69,32 @@ img {
     height: 100vh;
     background: rgba(0, 0, 0, 0.624);
 
-
     #welcome-titles {
       position: relative;
       margin-top: 30%;
       padding-left: 10%;
 
       #welcome-title {
-        font-family: inherit;
         font-size: 5rem;
         font-weight: 800;
-        color: $textColor;
       }
 
       #welcome-subtitle {
         font-size: 3rem;
-        font-family: 'Sacramento', cursive;
+        font-family: "Sacramento", cursive;
         font-weight: 800;
         color: $dominantColor;
       }
-    }
 
+      #play-video-btn {
+        margin-left: 3rem;
+      }
+    }
   }
 }
 
+//Welcome
+#section-christina {}
 
 // Import Media Queries
-@import 'media';
+@import "media";

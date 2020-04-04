@@ -1,7 +1,60 @@
+//Layout
 .container {
   max-width: $website-width;
 }
 
+
+
+//UI Elements
+.btn {
+  padding: 1rem 2rem;
+  background: none;
+  border: 1px solid $textColor;
+  font-family: $UIfont;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: $textColor;
+
+  &:hover {
+    color: $dominantColor;
+    border: 1px solid $dominantColor;
+    cursor: pointer;
+  }
+}
+
+
+//Section styling
 .section {
   min-height: 100vh;
+
+  .section-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .content-canvas {
+    display: grid;
+    grid-template-areas: "photo text";
+    grid-gap: 2rem;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+    background-color: $dominantColor;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+
+    .content-image {
+      grid-area: photo;
+    }
+
+    .content-text {
+      color: $textColorDark;
+      grid-area: text;
+    }
+  }
 }
