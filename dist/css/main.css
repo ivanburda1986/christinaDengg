@@ -39,14 +39,11 @@
     flex-direction: row;
     width: 80%;
     height: 80%;
-    background-color: #900000;
     margin: 0 auto;
     padding: 2rem 2rem; }
     .section .content-canvas .content-image {
-      grid-area: photo; }
-    .section .content-canvas .content-text {
-      color: #030303ff;
-      grid-area: text; }
+      grid-area: photo;
+      border: 5px solid #000; }
 
 /*General styles*/
 * {
@@ -58,7 +55,8 @@ body {
   line-height: 1.6;
   color: #dedede;
   background: #000;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  background: url("../img/frontpage-background-landscape.jpg") fixed center/cover; }
 
 a {
   text-decoration: none;
@@ -75,6 +73,7 @@ img {
   width: 100%; }
 
 #main-nav {
+  position: relative;
   display: flex;
   min-height: 3rem; }
   #main-nav ul {
@@ -88,25 +87,27 @@ img {
     #main-nav ul .social-media-link {
       padding-top: 0.75rem; }
 
-#section-welcome {
-  background: url("../img/frontpage-background-landscape.jpg") no-repeat center center/cover; }
-  #section-welcome #background {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.624); }
-    #section-welcome #background #welcome-titles {
-      position: relative;
-      margin-top: 30%;
-      padding-left: 10%; }
-      #section-welcome #background #welcome-titles #welcome-title {
-        font-size: 5rem;
-        font-weight: 800; }
-      #section-welcome #background #welcome-titles #welcome-subtitle {
-        font-size: 3rem;
-        font-family: "Sacramento", cursive;
-        font-weight: 800;
-        color: #900000; }
-      #section-welcome #background #welcome-titles #play-video-btn {
-        margin-left: 3rem; }
+#section-welcome #background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.624); }
+  #section-welcome #background #welcome-titles {
+    position: relative;
+    margin-bottom: 15rem;
+    margin-left: 10rem; }
+    #section-welcome #background #welcome-titles #welcome-title {
+      font-size: 5rem;
+      font-weight: 800; }
+    #section-welcome #background #welcome-titles #welcome-subtitle {
+      font-size: 3rem;
+      font-family: "Sacramento", cursive;
+      font-weight: 800;
+      color: #900000; }
+    #section-welcome #background #welcome-titles #play-video-btn {
+      margin-left: 3rem; }
+
+#section-christina {
+  background: url("../img/backgrounds/dark1.jpg") fixed center/cover; }

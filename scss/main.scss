@@ -13,6 +13,8 @@ body {
   color: $textColor;
   background: $backgroundDarkColor;
   scroll-behavior: smooth;
+  background: $bg-image fixed center/cover;
+  //background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
 }
 
 a {
@@ -38,6 +40,7 @@ img {
 
 // Navigation
 #main-nav {
+  position: relative;
   display: flex;
   min-height: 3rem;
 
@@ -60,19 +63,21 @@ img {
 
 //Welcome
 #section-welcome {
-  background: $bg-image no-repeat center center / cover;
+  //background: $bg-image no-repeat center center / cover;
+
 
   #background {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.624);
 
     #welcome-titles {
       position: relative;
-      margin-top: 30%;
-      padding-left: 10%;
+      margin-bottom: 15rem;
+      margin-left: 10rem;
 
       #welcome-title {
         font-size: 5rem;
@@ -94,7 +99,9 @@ img {
 }
 
 //Welcome
-#section-christina {}
+#section-christina {
+  background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
+}
 
 // Import Media Queries
 @import "media";

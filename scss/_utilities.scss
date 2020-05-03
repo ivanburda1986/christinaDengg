@@ -27,6 +27,7 @@
 .section {
   min-height: 100vh;
 
+
   .section-header {
     display: flex;
     justify-content: center;
@@ -44,17 +45,14 @@
     flex-direction: row;
     width: 80%;
     height: 80%;
-    background-color: $dominantColor;
     margin: 0 auto;
     padding: 2rem 2rem;
 
     .content-image {
       grid-area: photo;
+      border: 5px solid #000;
     }
 
-    .content-text {
-      color: $textColorDark;
-      grid-area: text;
-    }
+
   }
 }
