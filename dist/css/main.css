@@ -8,7 +8,8 @@
 .color-theme_fish-5-rgba { color: rgba(13, 13, 13, 1); }
 */
 .container {
-  max-width: 100vw; }
+  max-width: 100vw;
+  height: 100vh; }
 
 .btn {
   padding: 1rem 2rem;
@@ -25,25 +26,31 @@
 
 .section {
   min-height: 100vh; }
-  .section .section-header {
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    font-size: 3rem;
-    font-weight: 800; }
   .section .content-canvas {
     display: grid;
-    grid-template-areas: "photo text";
-    grid-gap: 2rem;
-    flex-direction: row;
-    width: 80%;
-    height: 80%;
-    margin: 0 auto;
-    padding: 2rem 2rem; }
+    grid-template-columns: 1fr 1fr;
+    align-content: space-around;
+    grid-gap: 7rem;
+    height: 100%;
+    max-height: 100%;
+    border: 1px solid yellow;
+    justify-items: center;
+    justify-content: space-between; }
     .section .content-canvas .content-image {
-      grid-area: photo;
-      border: 5px solid #000; }
+      width: 80%;
+      max-width: 35rem;
+      border: 1px solid pink;
+      justify-self: self-end; }
+      .section .content-canvas .content-image img {
+        margin: auto 0; }
+    .section .content-canvas .content-text {
+      display: flex;
+      flex-direction: column;
+      justify-self: self-start;
+      justify-content: center;
+      width: 80%;
+      max-width: 35rem;
+      border: 1px solid green; }
 
 /*General styles*/
 * {
@@ -55,8 +62,7 @@ body {
   line-height: 1.6;
   color: #dedede;
   background: #000;
-  scroll-behavior: smooth;
-  background: url("../img/frontpage-background-landscape.jpg") fixed center/cover; }
+  scroll-behavior: smooth; }
 
 a {
   text-decoration: none;
@@ -72,10 +78,18 @@ ul {
 img {
   width: 100%; }
 
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding-bottom: 0.5rem; }
+
 #main-nav {
-  position: relative;
+  top: 0;
+  position: sticky;
   display: flex;
-  min-height: 3rem; }
+  z-index: 1;
+  min-height: 3rem;
+  padding-top: 1rem; }
   #main-nav ul {
     display: flex;
     margin-left: 40%; }
@@ -87,27 +101,25 @@ img {
     #main-nav ul .social-media-link {
       padding-top: 0.75rem; }
 
-#section-welcome #background {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.624); }
-  #section-welcome #background #welcome-titles {
-    position: relative;
-    margin-bottom: 15rem;
-    margin-left: 10rem; }
-    #section-welcome #background #welcome-titles #welcome-title {
-      font-size: 5rem;
-      font-weight: 800; }
-    #section-welcome #background #welcome-titles #welcome-subtitle {
-      font-size: 3rem;
-      font-family: "Sacramento", cursive;
-      font-weight: 800;
-      color: #900000; }
-    #section-welcome #background #welcome-titles #play-video-btn {
-      margin-left: 3rem; }
-
-#section-christina {
-  background: url("../img/backgrounds/dark1.jpg") fixed center/cover; }
+#section-welcome {
+  background: url("../img/frontpage-background-landscape.jpg") no-repeat center center/cover; }
+  #section-welcome #background {
+    margin-top: -70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.624); }
+    #section-welcome #background #welcome-titles {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 10%; }
+      #section-welcome #background #welcome-titles #welcome-title {
+        font-size: 5rem;
+        font-weight: 800; }
+      #section-welcome #background #welcome-titles #welcome-subtitle {
+        font-size: 3rem;
+        font-family: "Sacramento", cursive;
+        font-weight: 800;
+        color: #900000; }

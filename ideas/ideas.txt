@@ -50,3 +50,35 @@ https://www.websitebuilderexpert.com/designing-websites/how-to-choose-color-for-
 
 Video background
 https://www.youtube.com/watch?v=05ZHUuQVvJM
+
+
+
+
+//Scope
+-Navigation: Gets sticky when hitting the screen top
+-Pole Instruction Christina Dengg: When gets out of screen then launches an animation -> a smaller version of the "Pole Instruction Christina Dengg" animates to the top nav
+-Section background is an SVG, the top border has a shape rather than being a direct line
+-Sections do not need titles
+
+
+NAVIGATION
+fixed
+
+FRONTPAGE
+-static page with fully covered by an image
+-overlayed with a title and a subtitles
+
+CHRISTINA
+-a photo come from the left
+-a text with a summary about christina comes form the right
+
+ABOUT POLE
+-some three pieces of information
+
+GALLERY
+- few images with a page overlay gallery view
+- a link to social media
+
+
+
+

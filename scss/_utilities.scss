@@ -1,6 +1,8 @@
 //Layout
 .container {
   max-width: $website-width;
+  height: 100vh;
+
 }
 
 
@@ -27,30 +29,38 @@
 .section {
   min-height: 100vh;
 
-
-  .section-header {
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-
-    font-size: 3rem;
-    font-weight: 800;
-  }
-
   .content-canvas {
     display: grid;
-    grid-template-areas: "photo text";
-    grid-gap: 2rem;
-    flex-direction: row;
-    width: 80%;
-    height: 80%;
-    margin: 0 auto;
-    padding: 2rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-around;
+    grid-gap: 7rem;
+    height: 100%;
+    max-height: 100%;
+    border: 1px solid yellow;
+    justify-items: center;
+    justify-content: space-between;
+
 
     .content-image {
-      grid-area: photo;
-      border: 5px solid #000;
+      width: 80%;
+      max-width: 35rem;
+      border: 1px solid pink;
+      justify-self: self-end;
+
+
+      img {
+        margin: auto 0;
+      }
+    }
+
+    .content-text {
+      display: flex;
+      flex-direction: column;
+      justify-self: self-start;
+      justify-content: center;
+      width: 80%;
+      max-width: 35rem;
+      border: 1px solid green;
     }
 
 

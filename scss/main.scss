@@ -13,7 +13,7 @@ body {
   color: $textColor;
   background: $backgroundDarkColor;
   scroll-behavior: smooth;
-  background: $bg-image fixed center/cover;
+  //background: $bg-image fixed center/cover;
   //background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
 }
 
@@ -38,11 +38,20 @@ img {
   width: 100%;
 }
 
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
 // Navigation
 #main-nav {
-  position: relative;
+  top: 0;
+  position: sticky;
   display: flex;
+  z-index: 1;
   min-height: 3rem;
+  padding-top: 1rem;
 
   ul {
     display: flex;
@@ -63,21 +72,22 @@ img {
 
 //Welcome
 #section-welcome {
-  //background: $bg-image no-repeat center center / cover;
 
+  background: $bg-image no-repeat center center / cover;
 
   #background {
+    margin-top: -70px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.624);
 
     #welcome-titles {
-      position: relative;
-      margin-bottom: 15rem;
-      margin-left: 10rem;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 10%;
 
       #welcome-title {
         font-size: 5rem;
@@ -90,17 +100,13 @@ img {
         font-weight: 800;
         color: $dominantColor;
       }
-
-      #play-video-btn {
-        margin-left: 3rem;
-      }
     }
   }
 }
 
 //Welcome
 #section-christina {
-  background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
+  //background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
 }
 
 // Import Media Queries
