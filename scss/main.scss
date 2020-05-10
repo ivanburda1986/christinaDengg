@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -39,6 +40,12 @@ img {
 }
 
 h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
   font-size: 2rem;
   line-height: 2.5rem;
   padding-bottom: 0.5rem;
@@ -51,11 +58,13 @@ h1 {
   display: flex;
   z-index: 1;
   min-height: 3rem;
-  padding-top: 1rem;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 5px;
 
   ul {
     display: flex;
     margin-left: 40%;
+
 
     li {
       font-family: "Montserrat", sans-serif;
@@ -104,9 +113,129 @@ h1 {
   }
 }
 
-//Welcome
+//Christina
 #section-christina {
+  @extend %section-shared;
+
+  .content-canvas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-around;
+    grid-gap: 7rem;
+    justify-items: center;
+    justify-content: space-between;
+
+    .content-image {
+      width: 80%;
+      max-width: 35rem;
+      border: 1px solid pink;
+      justify-self: self-end;
+
+
+      img {
+        margin: auto 0;
+      }
+    }
+
+    .content-text {
+      display: flex;
+      flex-direction: column;
+      justify-self: self-start;
+      justify-content: center;
+      width: 80%;
+      max-width: 35rem;
+      border: 1px solid green;
+    }
+
+
+  }
+
+
+}
+
+//Performance
+#section-performance {
   //background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
+  @extend %section-shared;
+
+  .content-canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+  }
+
+  #performances-headline {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+  }
+
+  #performance-showcases {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    grid-gap: 0rem;
+    justify-items: center;
+    justify-content: space-between;
+
+
+    .performance-showcase {
+      display: grid;
+      background: pink;
+      width: 90%;
+      max-width: 400px;
+      height: 500px;
+    }
+  }
+
+
+}
+
+
+//Performance
+#section-gallery {
+  @extend %section-shared;
+
+  .content-canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+
+    #gallery-headline {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    #gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      align-content: center;
+      grid-gap: 1.5rem;
+      justify-items: center;
+      justify-content: space-between;
+
+
+      .gallery-thumbnail {
+        background: pink;
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+
+  }
+
+
 }
 
 // Import Media Queries

@@ -44,6 +44,8 @@ https://medium.muz.li/25-best-personal-website-design-examples-and-resources-for
 https://www.mockplus.com/blog/post/personal-website-design-examples
 https://www.mockplus.com/resource/post/15-high-quality-wordpress-sports-themes-for-sport-blogs/?r=linda
 
+https://native.seznamzpravy.cz/zvyste-hladinu-testosteronu-ve-svem-tele/?utm_source=Seznam&utm_medium=HProzcestnik6#&utm_source=www.seznam.cz&utm_medium=z-boxiku&utm_campaign=
+
 
 Colors
 https://www.websitebuilderexpert.com/designing-websites/how-to-choose-color-for-your-website/
@@ -54,30 +56,34 @@ https://www.youtube.com/watch?v=05ZHUuQVvJM
 
 
 
-//Scope
--Navigation: Gets sticky when hitting the screen top
--Pole Instruction Christina Dengg: When gets out of screen then launches an animation -> a smaller version of the "Pole Instruction Christina Dengg" animates to the top nav
--Section background is an SVG, the top border has a shape rather than being a direct line
--Sections do not need titles
-
+//Realistic scope
 
 NAVIGATION
 fixed
+the buttons will have just a bit transparent background with border radius
 
 FRONTPAGE
--static page with fully covered by an image
--overlayed with a title and a subtitles
+-static page fully covered by an image
+-overlayed with a title and a subtitle
+-optional: a button to launch a video instead of the static image
 
 CHRISTINA
--a photo come from the left
--a text with a summary about christina comes form the right
+-a photo which appears with an effect
+-a text with a summary about christina, appears with an effect
 
-ABOUT POLE
+PERFORMANCE
 -some three pieces of information
+-for example about 3 different performance types
+-appear with an effect
 
 GALLERY
 - few images with a page overlay gallery view
 - a link to social media
+
+Additonal:
+- accessibility
+- responsiveness
+- hosted at netlify, an .eu domain from wedos
 
 
 

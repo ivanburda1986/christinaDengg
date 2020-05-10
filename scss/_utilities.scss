@@ -2,6 +2,8 @@
 .container {
   max-width: $website-width;
   height: 100vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
 
 }
 
@@ -26,43 +28,12 @@
 
 
 //Section styling
-.section {
+%section-shared {
   min-height: 100vh;
 
   .content-canvas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: space-around;
-    grid-gap: 7rem;
     height: 100%;
     max-height: 100%;
     border: 1px solid yellow;
-    justify-items: center;
-    justify-content: space-between;
-
-
-    .content-image {
-      width: 80%;
-      max-width: 35rem;
-      border: 1px solid pink;
-      justify-self: self-end;
-
-
-      img {
-        margin: auto 0;
-      }
-    }
-
-    .content-text {
-      display: flex;
-      flex-direction: column;
-      justify-self: self-start;
-      justify-content: center;
-      width: 80%;
-      max-width: 35rem;
-      border: 1px solid green;
-    }
-
-
   }
 }
