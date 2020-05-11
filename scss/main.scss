@@ -90,7 +90,7 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.624);
+    background: rgba(0, 0, 0, 0.4);
 
     #welcome-titles {
       position: absolute;
@@ -128,7 +128,7 @@ h2 {
     .content-image {
       width: 80%;
       max-width: 35rem;
-      border: 1px solid pink;
+      //border: 1px solid $placeholderColor;
       justify-self: self-end;
 
 
@@ -144,7 +144,7 @@ h2 {
       justify-content: center;
       width: 80%;
       max-width: 35rem;
-      border: 1px solid green;
+      //border: 1px solid $placeholderColor;
     }
 
 
@@ -186,7 +186,7 @@ h2 {
 
     .performance-showcase {
       display: grid;
-      background: pink;
+      background: $placeholderColor;
       width: 90%;
       max-width: 400px;
       height: 500px;
@@ -197,7 +197,7 @@ h2 {
 }
 
 
-//Performance
+//Gallery
 #section-gallery {
   @extend %section-shared;
 
@@ -226,7 +226,7 @@ h2 {
 
 
       .gallery-thumbnail {
-        background: pink;
+        background: $placeholderColor;
         width: 100%;
         height: 300px;
       }
@@ -236,6 +236,13 @@ h2 {
   }
 
 
+}
+
+//Footer
+footer {
+  background: $placeholderColor;
+  width: 100vw;
+  height: 300px;
 }
 
 // Import Media Queries
