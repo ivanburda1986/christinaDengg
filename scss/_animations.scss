@@ -1,4 +1,6 @@
-.content-image:hover {
-  opacity: 0;
-  transition: all 3s;
+#testik {
+  &:hover {
+
+    background: orange;
+  }
 }
