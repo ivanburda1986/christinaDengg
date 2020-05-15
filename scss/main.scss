@@ -1,5 +1,6 @@
 @import "config";
 @import "utilities";
+@import "animations";
 
 /*General styles*/
 * {
@@ -106,7 +107,7 @@ h2 {
 
   #welcome-subtitle {
     font-size: 3rem;
-    font-family: "Sacramento", cursive;
+    font-family: $decorativeFont;
     font-weight: 800;
     color: $dominantColor;
   }
@@ -198,11 +199,71 @@ h2 {
 
   .performance-showcase {
     display: grid;
-    background: $placeholderColor;
+    //background: $placeholderColor;
+    background: yellow;
     width: 90%;
     max-width: 400px;
     height: 500px;
+
+
   }
+
+  #performance1 {
+    background: url('../img/performances/performance1.jpg') center;
+    background-size: cover;
+
+  }
+
+  .performance-showcase-background {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.0);
+    transition: all 1s;
+    align-items: center;
+    align-content: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 30%;
+  }
+
+  .performance-showcase-text {
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 800;
+    transition: all 1s;
+    visibility: 0;
+    opacity: 0;
+    font-family: $decorativeFont;
+  }
+
+  .space-between {
+    width: 100%;
+    height: 30px;
+    transition: all 1s;
+  }
+
+  .space-under {
+    width: 100%;
+    height: 0px;
+    transition: all 1s;
+  }
+
+  .performance-showcase-button {
+    width: 100%;
+  }
+
+  .performance-showcase-btn {
+    margin: 0 auto;
+    height: 3rem;
+    width: 50%;
+    border: 2px solid #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: all 1s;
+    visibility: 0;
+    opacity: 0;
+  }
+
 }
 
 //Gallery
@@ -252,4 +313,3 @@ footer {
 
 // Import Media Queries
 @import "media";
-@import "animations";

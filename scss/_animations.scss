@@ -1,0 +1,36 @@
+//Performance showcase
+#performance-showcases {
+  .performance-showcase:hover {
+    .performance-showcase-background {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .performance-showcase-text {
+
+      opacity: 1;
+    }
+
+    .space-between {
+
+      height: 0px;
+    }
+
+    .space-under {
+
+      height: 10px;
+    }
+
+
+    .performance-showcase-btn {
+
+      opacity: 1;
+    }
+  }
+
+  .performance-showcase-btn:hover {
+    background: white;
+    color: black;
+  }
+
+
+}
