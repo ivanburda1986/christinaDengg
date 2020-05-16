@@ -51,12 +51,12 @@
   background: white;
   color: black; }
 
-/*General styles*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+/*General styles*/
 body {
   font-family: "Lora", serif;
   line-height: 1.6;
