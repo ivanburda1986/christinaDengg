@@ -67,10 +67,6 @@ body {
 a {
   text-decoration: none;
   color: #dedede; }
-  a:hover {
-    color: #900000; }
-  a.current {
-    color: #900000; }
 
 ul {
   list-style: none; }
@@ -105,13 +101,17 @@ h2 {
     font-size: 0.8rem;
     text-transform: uppercase;
     padding: 1rem 1.5rem; }
+  #main-nav ul a:hover {
+    color: #900000; }
+  #main-nav ul a.current {
+    color: #900000; }
   #main-nav ul .social-media-link {
     padding-top: 0.75rem; }
 
 #section-welcome {
   background: url("../img/frontpage-background-landscape-v1.png") no-repeat center center/cover; }
 
-#background {
+#welcome-background {
   margin-top: -70px;
   display: flex;
   flex-direction: column;
@@ -141,14 +141,13 @@ h2 {
   justify-items: center;
   justify-content: space-between; }
 
-.content-image {
+#christina-image {
   width: 80%;
-  max-width: 35rem;
   justify-self: self-end; }
-  .content-image img {
+  #christina-image img {
     margin: auto 0; }
 
-.content-text {
+#christina-text {
   display: flex;
   flex-direction: column;
   justify-self: self-start;
@@ -183,7 +182,7 @@ h2 {
 
 #performance-showcases {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   align-content: center;
   grid-gap: 0rem;
   justify-items: center;
@@ -196,6 +195,12 @@ h2 {
     height: 500px; }
   #performance-showcases #performance1 {
     background: url("../img/performances/performance1.jpg") center;
+    background-size: cover; }
+  #performance-showcases #performance2 {
+    background: url("../img/performances/performance2.jpg") center;
+    background-size: cover; }
+  #performance-showcases #performance3 {
+    background: url("../img/performances/performance3.jpg") center;
     background-size: cover; }
   #performance-showcases .performance-showcase-background {
     display: flex;
