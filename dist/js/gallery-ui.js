@@ -9,14 +9,18 @@ class galleryUI {
     let galleryOverviewPhotos = "";
     photos.forEach(photo => {
       galleryOverviewPhotos += `
-      <div class="gallery-thumbnail">
-      <a href="#"
-        ><img src="/dist/img/gallery/${photo}" alt="${photo}"
-      /></a>
+      <div class="gallery-thumbnail" value="${photos.indexOf(photo)}">
+      <img src="/dist/img/gallery/${photo}" alt="${photo}"
+      />
       </div>
       `
     });
     this.galleryOverview.innerHTML = galleryOverviewPhotos;
+  }
+
+  showGalleryOverlay() {
+    this.galleryOverlay.classList.add("show");
+    this.galleryOverlay.classList.remove("hide");
   }
 
   hideGalleryOverlay() {

@@ -8,13 +8,18 @@
   z-index: 2;
   overflow-y: hidden;
   background: rgba(221, 150, 17, 1);
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
 
   &.hide {
     visibility: hidden;
   }
 }
 
-#gallery-close-btn {
+#gallery-hide-btn {
   width: 40px;
   height: 40px;
 }

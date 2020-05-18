@@ -2,15 +2,23 @@
 const gallery = new galleryUI();
 
 //UI Selectors
-const galleryCloseButton = document.getElementById("gallery-close-btn");
+const galleryHideButton = document.getElementById("gallery-hide-btn");
+const galleryGrid = document.getElementById("gallery-grid");
+
+
 
 
 //Populate the gallery overview
 gallery.listPhotos(photos);
 
+//Show the gallery overlay
+galleryGrid.addEventListener("click", (e) => {
+  console.log(e.target)
+  gallery.showGalleryOverlay();
+});
 
-//Close the gallery
-galleryCloseButton.addEventListener("click", (e) => {
+//Hide the gallery overlay
+galleryHideButton.addEventListener("click", (e) => {
   gallery.hideGalleryOverlay();
 });
 

@@ -60,11 +60,14 @@
   left: 0;
   z-index: 2;
   overflow-y: hidden;
-  background: #dd9611; }
+  background: #dd9611;
+  visibility: hidden; }
+  #gallery-overlay.show {
+    visibility: visible; }
   #gallery-overlay.hide {
     visibility: hidden; }
 
-#gallery-close-btn {
+#gallery-hide-btn {
   width: 40px;
   height: 40px; }
 
