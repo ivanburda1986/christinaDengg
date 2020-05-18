@@ -1,6 +1,7 @@
 class galleryUI {
   constructor() {
     this.galleryOverview = document.getElementById("gallery-grid");
+    this.galleryOverlay = document.getElementById("gallery-overlay");
   }
 
   //Display in the UI an overview of available photos
@@ -16,6 +17,10 @@ class galleryUI {
       `
     });
     this.galleryOverview.innerHTML = galleryOverviewPhotos;
+  }
+
+  hideGalleryOverlay() {
+    this.galleryOverlay.classList.add("hide");
   }
 
 }

@@ -1,6 +1,7 @@
 @import "config";
 @import "utilities";
 @import "animations";
+@import "gallery";
 @import "resets";
 @import "media";
 
@@ -15,6 +16,26 @@ body {
   //background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
 }
 
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 
 a {

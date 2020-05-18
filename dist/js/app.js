@@ -1,12 +1,18 @@
 //Initialize the Gallery UI
 const gallery = new galleryUI();
 
-
+//UI Selectors
+const galleryCloseButton = document.getElementById("gallery-close-btn");
 
 
 //Populate the gallery overview
 gallery.listPhotos(photos);
 
+
+//Close the gallery
+galleryCloseButton.addEventListener("click", (e) => {
+  gallery.hideGalleryOverlay();
+});
 
 
 
