@@ -302,7 +302,13 @@ h2 {
   .gallery-thumbnail {
     background: $placeholderColor;
     width: 100%;
-    height: 300px;
+    height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 

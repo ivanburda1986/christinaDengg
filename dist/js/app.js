@@ -1,3 +1,16 @@
+//Initialize the Gallery UI
+const gallery = new galleryUI();
+
+
+
+
+//Populate the gallery overview
+gallery.listPhotos(photos);
+
+
+
+
+/*
 window.addEventListener('scroll', () => {
   let ivan = document.getElementById("ivan");
   let scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -12,3 +25,4 @@ window.addEventListener('scroll', () => {
     ivan.classList.add("anim2");
   }
 })
+*/
