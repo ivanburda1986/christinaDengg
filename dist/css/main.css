@@ -67,6 +67,11 @@
   #gallery-overlay.hide {
     visibility: hidden; }
 
+.gallery-full-photo {
+  width: 40%;
+  height: auto;
+  border: 1px solid black; }
+
 #gallery-hide-btn {
   width: 40px;
   height: 40px; }
