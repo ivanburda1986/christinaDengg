@@ -8,7 +8,7 @@ const nextButton = document.getElementById("gallery-next-btn");
 const previousButton = document.getElementById("gallery-previous-btn");
 
 //Variables
-const totalPhotos = photos.length;
+const ultimatePhotoNumber = photos.length - 1;
 
 
 //Populate the gallery overview
@@ -24,10 +24,15 @@ galleryGrid.addEventListener("click", (e) => {
 nextButton.addEventListener("click", () => {
   const currentFullPhoto = document.querySelector(".gallery-full-photo").id;
   const currentFullPhotoNumber = photos.indexOf(currentFullPhoto);
-  gallery.showNextFullPhoto(currentFullPhotoNumber, totalPhotos);
+  gallery.showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber);
 });
 
 //Show the previous full photo
+previousButton.addEventListener("click", () => {
+  const currentFullPhoto = document.querySelector(".gallery-full-photo").id;
+  const currentFullPhotoNumber = photos.indexOf(currentFullPhoto);
+  gallery.showPreviousFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber);
+});
 
 
 //Hide the gallery overlay

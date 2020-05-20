@@ -28,19 +28,30 @@ class galleryUI {
     this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/${fullPhotoName}" alt="${fullPhotoName}" class="gallery-full-photo" id="${fullPhotoName}"/>`;
   }
 
-  showNextFullPhoto(currentFullPhotoNumber, totalPhotos) {
+  showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber) {
+    console.log(currentFullPhotoNumber);
+    //console.log(ultimatePhotoNumber);
     let nextPhotoNumber;
-    if (currentFullPhotoNumber === totalPhotos - 1) {
-      nextPhotoNumber = 1;
+    if (currentFullPhotoNumber === ultimatePhotoNumber) {
+      nextPhotoNumber = 0;
     } else {
-      nextPhotoNumber = currentFullPhotoNumber + 2;
+      nextPhotoNumber = currentFullPhotoNumber + 1;
     }
     console.log(nextPhotoNumber);
     this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${nextPhotoNumber}.jpg" alt="photo${nextPhotoNumber}.jpg" class="gallery-full-photo" id="photo${nextPhotoNumber}.jpg"/>`;
   }
 
-  showNextPreviousPhoto(currentPhotoNumber, totalPhotos) {
-
+  showPreviousFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber) {
+    console.log(currentFullPhotoNumber);
+    //console.log(ultimatePhotoNumber);
+    let previousPhotoNumber;
+    if (currentFullPhotoNumber === 0) {
+      previousPhotoNumber = ultimatePhotoNumber;
+    } else {
+      previousPhotoNumber = currentFullPhotoNumber - 1;
+    }
+    console.log(previousPhotoNumber);
+    this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${previousPhotoNumber}.jpg" alt="photo${previousPhotoNumber}.jpg" class="gallery-full-photo" id="photo${previousPhotoNumber}.jpg"/>`;
   }
 
 
