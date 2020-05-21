@@ -3,6 +3,7 @@ class galleryUI {
     this.galleryOverview = document.getElementById("gallery-grid");
     this.galleryOverlay = document.getElementById("gallery-overlay");
     this.fullPhotoContainer = document.getElementById("gallery-full-photo-container");
+    this.currentFullPhotoDescription = document.getElementById("gallery-full-photo-description");
   }
 
   //Display in the UI an overview of available photos
@@ -29,7 +30,7 @@ class galleryUI {
   }
 
   showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber) {
-    console.log(currentFullPhotoNumber);
+    console.log("Current photo number:" + currentFullPhotoNumber);
     //console.log(ultimatePhotoNumber);
     let nextPhotoNumber;
     if (currentFullPhotoNumber === ultimatePhotoNumber) {
@@ -37,7 +38,7 @@ class galleryUI {
     } else {
       nextPhotoNumber = currentFullPhotoNumber + 1;
     }
-    console.log(nextPhotoNumber);
+    console.log("Next photo number:" + nextPhotoNumber);
     this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${nextPhotoNumber}.jpg" alt="photo${nextPhotoNumber}.jpg" class="gallery-full-photo" id="photo${nextPhotoNumber}.jpg"/>`;
   }
 
@@ -50,8 +51,12 @@ class galleryUI {
     } else {
       previousPhotoNumber = currentFullPhotoNumber - 1;
     }
-    console.log(previousPhotoNumber);
+    console.log("Previous photo number:" + previousPhotoNumber);
     this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${previousPhotoNumber}.jpg" alt="photo${previousPhotoNumber}.jpg" class="gallery-full-photo" id="photo${previousPhotoNumber}.jpg"/>`;
+  }
+
+  showCurrentFullPhotoDescription(currentFullPhotoNumber, ultimatePhotoNumber) {
+    this.currentFullPhotoDescription.innerHTML = `<p>${currentFullPhotoNumber+1}/${ultimatePhotoNumber+1}</p>`;
   }
 
 

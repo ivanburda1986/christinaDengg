@@ -10,6 +10,11 @@ const previousButton = document.getElementById("gallery-previous-btn");
 //Variables
 const ultimatePhotoNumber = photos.length - 1;
 
+function getCurrentFullPhotoNumber() {
+  const currentFullPhoto = document.querySelector(".gallery-full-photo").id;
+  const currentFullPhotoNumber = photos.indexOf(currentFullPhoto);
+  return currentFullPhotoNumber;
+}
 
 //Populate the gallery overview
 gallery.listPhotos(photos);
@@ -18,19 +23,18 @@ gallery.listPhotos(photos);
 galleryGrid.addEventListener("click", (e) => {
   gallery.showGalleryOverlay();
   gallery.showFullPhoto(e.target.id);
+  const currentFullPhotoNumber = getCurrentFullPhotoNumber();
 });
 
 //Show the next full photo
 nextButton.addEventListener("click", () => {
-  const currentFullPhoto = document.querySelector(".gallery-full-photo").id;
-  const currentFullPhotoNumber = photos.indexOf(currentFullPhoto);
+  const currentFullPhotoNumber = getCurrentFullPhotoNumber();
   gallery.showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber);
 });
 
 //Show the previous full photo
 previousButton.addEventListener("click", () => {
-  const currentFullPhoto = document.querySelector(".gallery-full-photo").id;
-  const currentFullPhotoNumber = photos.indexOf(currentFullPhoto);
+  const currentFullPhotoNumber = getCurrentFullPhotoNumber();
   gallery.showPreviousFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber);
 });
 

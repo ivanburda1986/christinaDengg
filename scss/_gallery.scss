@@ -65,8 +65,9 @@
 
 }
 
-#gallery-description {
+#gallery-full-photo-description {
+  display: flex;
   grid-area: description;
-  background: rgba(0, 0, 0, 0.9);
-
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
 }
