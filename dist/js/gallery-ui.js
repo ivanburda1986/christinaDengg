@@ -30,33 +30,37 @@ class galleryUI {
   }
 
   showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber) {
-    console.log("Current photo number:" + currentFullPhotoNumber);
-    //console.log(ultimatePhotoNumber);
+
     let nextPhotoNumber;
     if (currentFullPhotoNumber === ultimatePhotoNumber) {
-      nextPhotoNumber = 0;
+      nextPhotoNumber = 1;
     } else {
       nextPhotoNumber = currentFullPhotoNumber + 1;
     }
-    console.log("Next photo number:" + nextPhotoNumber);
+
     this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${nextPhotoNumber}.jpg" alt="photo${nextPhotoNumber}.jpg" class="gallery-full-photo" id="photo${nextPhotoNumber}.jpg"/>`;
+    console.log(`This is photo number:${nextPhotoNumber}`);
   }
 
   showPreviousFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber) {
-    console.log(currentFullPhotoNumber);
-    //console.log(ultimatePhotoNumber);
     let previousPhotoNumber;
-    if (currentFullPhotoNumber === 0) {
+    if (currentFullPhotoNumber === 1) {
       previousPhotoNumber = ultimatePhotoNumber;
     } else {
       previousPhotoNumber = currentFullPhotoNumber - 1;
     }
-    console.log("Previous photo number:" + previousPhotoNumber);
+    console.log(`This is photo number:${previousPhotoNumber}`);
     this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${previousPhotoNumber}.jpg" alt="photo${previousPhotoNumber}.jpg" class="gallery-full-photo" id="photo${previousPhotoNumber}.jpg"/>`;
+
   }
 
-  showCurrentFullPhotoDescription(currentFullPhotoNumber, ultimatePhotoNumber) {
-    this.currentFullPhotoDescription.innerHTML = `<p>${currentFullPhotoNumber+1}/${ultimatePhotoNumber+1}</p>`;
+  showCurrentFullPhotoDescription(funkce, ultimatePhotoNumber) {
+    let current = funkce();
+    this.currentFullPhotoDescription.innerHTML = `<p>${current}/${ultimatePhotoNumber}</p>`;
+  }
+
+  clearPreviousFullPhotoDescription() {
+    this.currentFullPhotoDescription.innerHTML = ``;
   }
 
 

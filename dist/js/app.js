@@ -8,11 +8,11 @@ const nextButton = document.getElementById("gallery-next-btn");
 const previousButton = document.getElementById("gallery-previous-btn");
 
 //Variables
-const ultimatePhotoNumber = photos.length - 1;
+const ultimatePhotoNumber = photos.length;
 
 function getCurrentFullPhotoNumber() {
   const currentFullPhoto = document.querySelector(".gallery-full-photo").id;
-  const currentFullPhotoNumber = photos.indexOf(currentFullPhoto);
+  const currentFullPhotoNumber = photos.indexOf(currentFullPhoto) + 1;
   return currentFullPhotoNumber;
 }
 
@@ -21,21 +21,27 @@ gallery.listPhotos(photos);
 
 //Show the gallery overlay
 galleryGrid.addEventListener("click", (e) => {
+
   gallery.showGalleryOverlay();
   gallery.showFullPhoto(e.target.id);
-  const currentFullPhotoNumber = getCurrentFullPhotoNumber();
+  gallery.clearPreviousFullPhotoDescription();
+  gallery.showCurrentFullPhotoDescription(getCurrentFullPhotoNumber, ultimatePhotoNumber);
 });
 
 //Show the next full photo
 nextButton.addEventListener("click", () => {
   const currentFullPhotoNumber = getCurrentFullPhotoNumber();
   gallery.showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber);
+  gallery.clearPreviousFullPhotoDescription();
+  gallery.showCurrentFullPhotoDescription(getCurrentFullPhotoNumber, ultimatePhotoNumber);
 });
 
 //Show the previous full photo
 previousButton.addEventListener("click", () => {
   const currentFullPhotoNumber = getCurrentFullPhotoNumber();
   gallery.showPreviousFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber);
+  gallery.clearPreviousFullPhotoDescription();
+  gallery.showCurrentFullPhotoDescription(getCurrentFullPhotoNumber, ultimatePhotoNumber);
 });
 
 
