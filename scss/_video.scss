@@ -1,0 +1,23 @@
+#video-overlay {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  overflow-y: hidden;
+  //background: rgba(0, 0, 0, 0.9);
+  background: pink;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &.hide {
+    visibility: hidden;
+  }
+}

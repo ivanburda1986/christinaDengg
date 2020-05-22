@@ -1,11 +1,15 @@
 //Initialize the Gallery UI
 const gallery = new galleryUI();
+const video = new videoUI();
 
 //UI Selectors
 const galleryHideButton = document.getElementById("gallery-hide-btn");
 const galleryGrid = document.getElementById("gallery-grid");
 const nextButton = document.getElementById("gallery-next-btn");
 const previousButton = document.getElementById("gallery-previous-btn");
+const aerialVideo = document.getElementById("aerial-video-btn");
+const exoticVideo = document.getElementById("exotic-video-btn");
+const classicalVideo = document.getElementById("classical-video-btn");
 
 //Variables
 const ultimatePhotoNumber = photos.length;
@@ -15,6 +19,15 @@ function getCurrentFullPhotoNumber() {
   const currentFullPhotoNumber = photos.indexOf(currentFullPhoto) + 1;
   return currentFullPhotoNumber;
 }
+
+//PERFORMANCE
+//Launch the videos
+aerialVideo.addEventListener("click", (e) => {
+  video.showVideoOverlay();
+})
+
+
+
 
 //Populate the gallery overview
 gallery.listPhotos(photos);

@@ -41,17 +41,25 @@
   margin: 0 auto;
 }
 
-
-
-#gallery-hide-btn {
-  @extend %galleryButtonShared;
-  grid-area: hideButton;
+%hide-button {
   width: 4rem;
   height: 100%;
   font-size: 4rem;
   align-self: flex-end;
   justify-self: end;
   margin-right: 2rem;
+}
+
+.hide-button {
+  @extend %galleryButtonShared;
+  @extend %hide-button;
+}
+
+
+#gallery-hide-btn {
+  @extend %galleryButtonShared;
+  @extend %hide-button;
+  grid-area: hideButton;
 }
 
 #gallery-previous-btn {
@@ -81,5 +89,5 @@
   grid-area: description;
   background: rgba(0, 0, 0, 0.7);
   justify-content: center;
-  color: pink;
+  color: $textColorLight;
 }
