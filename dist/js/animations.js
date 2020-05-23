@@ -1,43 +1,38 @@
 window.addEventListener('scroll', () => {
-  let performancesHeadline = document.getElementById("performances-headline");
-
-  let windowInnerHeight = window.innerHeight;
-  let yAxisScrolled = document.documentElement.scrollTop;
-
-  let performancesHeadlinePositionFull = performancesHeadline.getBoundingClientRect();
-  let performancesHeadlinePositionTop = performancesHeadline.getBoundingClientRect().top;
-
-  let performancesTriggerPosition = windowInnerHeight / 1.5;
-
-  if (performancesHeadlinePositionTop < performancesTriggerPosition) {
-    console.log('------------------now---------------');
-    performancesHeadline.classList.add("anim-opacity-endState");
-  }
-
-  console.log(`1)Window inner height: ${windowInnerHeight}`);
-  console.log(`2)Performance headline position top: ${performancesHeadlinePositionTop}`);
-  console.log(`3)Trigger position: ${performancesTriggerPosition}`);
-  //console.log(`4)Already scrolled on the y-axis: ${yAxisScrolled}`);
+  animateOnScroll("christina-image", "anim-opacity-endState", 50);
+  animateOnScroll("christina-text", "anim-opacity-endState", 50);
+  animateOnScroll("performances-headline", "anim-opacity-endState", 25);
+  animateOnScroll("gallery-headline", "anim-opacity-endState", 75);
 })
 
 
+//Add an animation-related class to an object while scrolling
+//selector = selector of the item to animate;
+//requestedEffect = a name of the class to add in order to trigger the navigation;
+//requestedEffect = a name of the class to add in order to trigger the navigation;
+//screenPercentualPositionToTrigger = percentual expression of the screen position when to trigger the animation - available values: 25, 50, 75;
+function animateOnScroll(selector, requestedEffect, screenPercentualPositionToTrigger = 50) {
+  let divider;
+  switch (screenPercentualPositionToTrigger) {
+    case 25:
+      divider = 4;
+      break;
+    case 50:
+      divider = 2;
+      break;
+    case 75:
+      divider = 1.5;
+      break;
+  }
 
-
-// let christinaImage = document.getElementById("christina-image");
-// let christinaText = document.getElementById("christina-text");
-
-// let christinaPosition = christinaImage.getBoundingClientRect();
-// let christinaTriggerPosition = (christinaPosition.bottom - christinaPosition.height);
-
-// if (scrollY > christinaTriggerPosition) {
-//   christinaImage.classList.add("anim-opacity-endState");
-//   christinaImage.classList.add("anim-slideDown-endState");
-//   christinaText.classList.add("anim-opacity-endState");
-//   christinaText.classList.add("anim-slideLeft-endState");
-
-// }
-
-// 1)Window height: 3577
-// 2)Scrolled: y-axis: 2009
-// 3)Performance headline top position: 353.5
-// 4)Trigger position: 827.75
+  let windowInnerHeight = window.innerHeight;
+  let itemToAnimate = document.getElementById(selector);
+  let itemPositionTop = itemToAnimate.getBoundingClientRect().top;
+  let itemTriggerPosition = windowInnerHeight / divider;
+  if (itemPositionTop < itemTriggerPosition) {
+    itemToAnimate.classList.add(requestedEffect);
+  }
+  // console.log(`1)Window inner height: ${windowInnerHeight}`);
+  // console.log(`2)${selector} position top: ${itemPositionTop}`);
+  // console.log(`3)Trigger position: ${itemTriggerPosition}`);
+}
