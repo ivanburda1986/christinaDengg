@@ -24,6 +24,7 @@ function getCurrentFullPhotoNumber() {
 //Launch the videos
 aerialVideo.addEventListener("click", (e) => {
   video.showVideoOverlay();
+  video.showVideo();
 })
 
 
