@@ -8,7 +8,13 @@ class videoUI {
     this.videoOverlay.classList.remove("hide");
   }
 
-  showVideo(videoName) {
-    this.videoContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/tAGnKpE4NCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  hideVideoOverlay() {
+    this.videoOverlay.classList.add("hide");
+    this.videoContainer.innerHTML = ``;
   }
+
+  playVideo(videoName) {
+    this.videoContainer.innerHTML = videoName;
+  }
+
 }

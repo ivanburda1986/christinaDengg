@@ -10,6 +10,7 @@ const previousButton = document.getElementById("gallery-previous-btn");
 const aerialVideo = document.getElementById("aerial-video-btn");
 const exoticVideo = document.getElementById("exotic-video-btn");
 const classicalVideo = document.getElementById("classical-video-btn");
+const videoHideButton = document.getElementById("video-hide-btn");
 
 //Variables
 const ultimatePhotoNumber = photos.length;
@@ -21,11 +22,26 @@ function getCurrentFullPhotoNumber() {
 }
 
 //PERFORMANCE
-//Launch the videos
+//Launch a video
 aerialVideo.addEventListener("click", (e) => {
   video.showVideoOverlay();
-  video.showVideo();
+  video.playVideo(performanceVideo1);
 })
+
+exoticVideo.addEventListener("click", (e) => {
+  video.showVideoOverlay();
+  video.playVideo(performanceVideo2);
+})
+
+classicalVideo.addEventListener("click", (e) => {
+  video.showVideoOverlay();
+  video.playVideo(performanceVideo3);
+})
+
+//Hide the video overlay
+videoHideButton.addEventListener("click", (e) => {
+  video.hideVideoOverlay();
+});
 
 
 
