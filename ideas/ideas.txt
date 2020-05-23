@@ -88,5 +88,33 @@ Additonal:
 - hosted at netlify, an .eu domain from wedos
 
 
+//Still to do
+Navigation
+-dynamic highlighting
+
+Welcome
+-carrousel: 3 different photos, slideshow with a timer and a nice effect
+-show a loading of time before the next image gets displayed
+
+Footer
+-graphics
+-copyright with a dynamically displayed year
+-a link to my own site as a creator
+
+Additional
+-add the real content
+-responsiveness
+-accessibility
+-refactoring
+-host on netlify with an .eu domain from wedos
+
+
+
+
+
+
+
+
+
 
 
