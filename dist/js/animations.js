@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById("welcome-title").classList.add("anim-slideDown-endState");
-  document.getElementById("welcome-subtitle").classList.add("anim-moveInFromLeft-endState");
+  document.getElementById("welcome-subtitle").classList.add("anim-opacity-endState");
 });
 
 window.addEventListener('scroll', () => {
@@ -8,14 +8,14 @@ window.addEventListener('scroll', () => {
   animateOnScroll("christina-image", "anim-slideRight-endState", 50);
   animateOnScroll("christina-text", "anim-opacity-endState", 50);
   animateOnScroll("christina-text", "anim-slideLeft-endState", 50);
-  animateOnScroll("performances-headline", "anim-opacity-endState", 50);
+  animateOnScroll("performances-headline", "anim-opacity-endState", 25);
   animateOnScroll("performance1", "anim-opacity-delayed-endState", 50);
   animateOnScroll("performance1", "anim-slideRight-endState", 50);
   animateOnScroll("performance2", "anim-opacity-delayed-endState", 50);
   animateOnScroll("performance3", "anim-opacity-delayed-endState", 50);
   animateOnScroll("performance3", "anim-slideLeft-endState", 50);
-  animateOnScroll("gallery-headline", "anim-opacity-endState", 50);
-})
+  animateOnScroll("gallery-headline", "anim-opacity-endState", 25);
+});
 
 //Add an animation-related class to an object while scrolling
 //selector = selector of the item to animate;
@@ -46,4 +46,27 @@ function animateOnScroll(selector, requestedEffect, screenPercentualPositionToTr
   // console.log(`1)Window inner height: ${windowInnerHeight}`);
   // console.log(`2)${selector} position top: ${itemPositionTop}`);
   // console.log(`3)Trigger position: ${itemTriggerPosition}`);
+}
+
+
+//Dynamic highlighting in the horizontal navigation
+let welcomeSection = document.getElementById("section-welcome");
+let christinaSection = document.getElementById("section-christina");
+let performanceSection = document.getElementById("section-performance");
+let gallerySection = document.getElementById("section-gallery");
+
+window.addEventListener('scroll', () => {
+
+  animateOnScroll("section-christina", "current", 25);
+});
+
+
+
+function highlightNavigationSection() {
+  const navigation = document.getElementsByClassName("main-nav-btn-link");
+  for (let item of navigation) {
+    item.classList.remove("current");
+  }
+
+
 }

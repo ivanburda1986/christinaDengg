@@ -306,6 +306,7 @@ h2 {
   left: 10%; }
   #welcome-titles #welcome-title {
     font-size: 4.5rem;
+    margin-bottom: 1rem;
     font-weight: 800; }
   #welcome-titles #welcome-subtitle {
     font-size: 2.5rem;
@@ -365,13 +366,15 @@ h2 {
     height: 500px; }
   #performance-showcases #performance1 {
     background: url("../img/performances/performance1.jpg") center;
-    background-size: cover; }
+    background-size: cover;
+    margin-left: -4rem; }
   #performance-showcases #performance2 {
     background: url("../img/performances/performance2.jpg") center;
     background-size: cover; }
   #performance-showcases #performance3 {
     background: url("../img/performances/performance3.jpg") center;
-    background-size: cover; }
+    background-size: cover;
+    margin-right: -4rem; }
   #performance-showcases .performance-showcase-background {
     display: flex;
     flex-direction: column;
