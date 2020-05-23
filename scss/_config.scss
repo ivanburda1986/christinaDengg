@@ -18,10 +18,7 @@ cursive;
 
 $bg-image: url('../img/frontpage-background-landscape-v1.png');
 
-//Transition mixins
-@mixin transition-ease {
-  transition: all 0.5s ease-in-out;
-}
+
 
 
 /* Color Theme Swatches in RGBA */

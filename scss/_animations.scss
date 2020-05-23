@@ -1,3 +1,14 @@
+//Transition mixins
+@mixin transition-fastSpeed {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin transition-mediumSpeed {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
 //Performance showcase
 #performance-showcases {
   .performance-showcase:hover {
@@ -27,6 +38,32 @@
     background: white;
     color: black;
   }
+}
 
 
+//Page dynamics - animations
+
+.anim-opacity-startState {
+  opacity: 0;
+  @include transition-mediumSpeed;
+}
+
+.anim-opacity-endState {
+  opacity: 1;
+}
+
+.anim-slideDown-startState {
+  @include transition-mediumSpeed;
+}
+
+.anim-slideDown-endState {
+  transform: translateY(2rem);
+}
+
+.anim-slideLeft-startState {
+  @include transition-mediumSpeed;
+}
+
+.anim-slideLeft-endState {
+  transform: translateY(-2rem);
 }

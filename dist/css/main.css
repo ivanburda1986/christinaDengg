@@ -51,6 +51,31 @@
   background: white;
   color: black; }
 
+.anim-opacity-startState {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; }
+
+.anim-opacity-endState {
+  opacity: 1; }
+
+.anim-slideDown-startState {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; }
+
+.anim-slideDown-endState {
+  transform: translateY(2rem); }
+
+.anim-slideLeft-startState {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; }
+
+.anim-slideLeft-endState {
+  transform: translateY(-2rem); }
+
 #gallery-overlay {
   display: grid;
   grid-template-areas: "hideButton hideButton hideButton" "previousButton fullPhoto nextButton" "description description description";
@@ -215,7 +240,7 @@ h2 {
 
 #main-nav ul {
   display: flex;
-  margin-left: 40%; }
+  padding-left: 40%; }
   #main-nav ul li {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
@@ -245,10 +270,10 @@ h2 {
   top: 50%;
   left: 10%; }
   #welcome-titles #welcome-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 800; }
   #welcome-titles #welcome-subtitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Sacramento", cursive;
     font-weight: 800;
     color: #900000; }
@@ -275,20 +300,6 @@ h2 {
   justify-content: center;
   width: 80%;
   max-width: 35rem; }
-
-#testik {
-  color: pink; }
-
-.anim {
-  width: 100px;
-  height: 100px;
-  background: orange;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 4s; }
-
-.anim2 {
-  opacity: 1; }
 
 #section-performance .content-canvas {
   display: flex;
