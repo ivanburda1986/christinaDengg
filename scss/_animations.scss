@@ -1,13 +1,21 @@
 //Transition mixins
-@mixin transition-fastSpeed {
+@mixin transition-littleTime {
   transition: all 0.5s ease-in-out;
 }
 
-@mixin transition-mediumSpeed {
+@mixin transition-mediumTime {
   transition-property: all;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
 }
+
+@mixin transition-muchTime {
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+}
+
+
 
 //Performance showcase
 #performance-showcases {
@@ -43,27 +51,69 @@
 
 //Page dynamics - animations
 
+//Get visible;
 .anim-opacity-startState {
   opacity: 0;
-  @include transition-mediumSpeed;
+  @include transition-mediumTime;
 }
 
 .anim-opacity-endState {
   opacity: 1;
 }
 
+.anim-opacity-delayed-startState {
+  opacity: 0;
+  @include transition-muchTime();
+}
+
+.anim-opacity-delayed-endState {
+  opacity: 1;
+}
+
+//Slide a bit down;
 .anim-slideDown-startState {
-  @include transition-mediumSpeed;
+  @include transition-mediumTime;
 }
 
 .anim-slideDown-endState {
   transform: translateY(2rem);
 }
 
+//Slide a bit left;
 .anim-slideLeft-startState {
-  @include transition-mediumSpeed;
+  @include transition-mediumTime;
 }
 
 .anim-slideLeft-endState {
-  transform: translateY(-2rem);
+  transform: translateX(-2rem);
+}
+
+//Slide a bit right;
+.anim-slideRight-startState {
+  @include transition-mediumTime;
+
+}
+
+.anim-slideRight-endState {
+  transform: translateX(2rem);
+}
+
+//Move-in from right;
+.anim-moveInFromRight-startState {
+  @include transition-muchTime();
+  transform: translateX(3000px);
+}
+
+.anim-moveInFromRight-endState {
+  transform: translateX(0);
+}
+
+//Move-in from left;
+.anim-moveInFromLeft-startState {
+  @include transition-muchTime();
+  opacity: 0;
+}
+
+.anim-moveInFromLeft-endState {
+  opacity: 1;
 }

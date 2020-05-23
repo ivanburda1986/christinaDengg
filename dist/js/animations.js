@@ -1,10 +1,21 @@
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("welcome-title").classList.add("anim-slideDown-endState");
+  document.getElementById("welcome-subtitle").classList.add("anim-moveInFromLeft-endState");
+});
+
 window.addEventListener('scroll', () => {
   animateOnScroll("christina-image", "anim-opacity-endState", 50);
+  animateOnScroll("christina-image", "anim-slideRight-endState", 50);
   animateOnScroll("christina-text", "anim-opacity-endState", 50);
-  animateOnScroll("performances-headline", "anim-opacity-endState", 25);
-  animateOnScroll("gallery-headline", "anim-opacity-endState", 75);
+  animateOnScroll("christina-text", "anim-slideLeft-endState", 50);
+  animateOnScroll("performances-headline", "anim-opacity-endState", 50);
+  animateOnScroll("performance1", "anim-opacity-delayed-endState", 50);
+  animateOnScroll("performance1", "anim-slideRight-endState", 50);
+  animateOnScroll("performance2", "anim-opacity-delayed-endState", 50);
+  animateOnScroll("performance3", "anim-opacity-delayed-endState", 50);
+  animateOnScroll("performance3", "anim-slideLeft-endState", 50);
+  animateOnScroll("gallery-headline", "anim-opacity-endState", 50);
 })
-
 
 //Add an animation-related class to an object while scrolling
 //selector = selector of the item to animate;
@@ -14,13 +25,13 @@ window.addEventListener('scroll', () => {
 function animateOnScroll(selector, requestedEffect, screenPercentualPositionToTrigger = 50) {
   let divider;
   switch (screenPercentualPositionToTrigger) {
-    case 25:
+    case 75:
       divider = 4;
       break;
     case 50:
       divider = 2;
       break;
-    case 75:
+    case 25:
       divider = 1.5;
       break;
   }
