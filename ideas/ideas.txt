@@ -90,16 +90,20 @@ Additonal:
 
 //Still to do
 Navigation
--dynamic highlighting
+-dynamic highlighting --DONE
 
 Welcome
 -carrousel: 3 different photos, slideshow with a timer and a nice effect
 -show a loading of time before the next image gets displayed
+- idea: http://www.landmarkmlp.com/js-plugin/owl.carousel/demos/transitions.html
 
 Footer
--graphics
+-graphics (logo)
 -copyright with a dynamically displayed year
 -a link to my own site as a creator
+
+Favicon
+-from the site logo
 
 Additional
 -add the real content
