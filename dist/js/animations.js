@@ -50,23 +50,22 @@ function animateOnScroll(selector, requestedEffect, screenPercentualPositionToTr
 
 
 //Dynamic highlighting in the horizontal navigation
-let welcomeSection = document.getElementById("section-welcome");
-let christinaSection = document.getElementById("section-christina");
-let performanceSection = document.getElementById("section-performance");
-let gallerySection = document.getElementById("section-gallery");
 
 window.addEventListener('scroll', () => {
-
-  animateOnScroll("section-christina", "current", 25);
+  navigationLinkHighlighting("nav-welcome", "section-welcome");
+  navigationLinkHighlighting("nav-christina", "section-christina");
+  navigationLinkHighlighting("nav-performance", "section-performance");
+  navigationLinkHighlighting("nav-gallery", "section-gallery");
 });
 
-
-
-function highlightNavigationSection() {
-  const navigation = document.getElementsByClassName("main-nav-btn-link");
-  for (let item of navigation) {
-    item.classList.remove("current");
+function navigationLinkHighlighting(navigationElementSelector, triggeringElementSelector) {
+  let windowInnerHeight = window.innerHeight;
+  let navigationLink = document.getElementById(navigationElementSelector);
+  let triggerer = document.getElementById(triggeringElementSelector);
+  let triggererMiddle = triggerer.getBoundingClientRect().top + triggerer.getBoundingClientRect().height * 0.5;
+  if (triggererMiddle > 0 && triggererMiddle < windowInnerHeight) {
+    navigationLink.classList.add("current");
+  } else {
+    navigationLink.classList.remove("current");
   }
-
-
 }

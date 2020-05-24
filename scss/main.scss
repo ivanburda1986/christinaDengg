@@ -86,6 +86,14 @@ h2 {
     padding: 1rem 1.5rem;
   }
 
+  #section-christina {
+    .current {
+      color: $dominantColor;
+    }
+  }
+
+
+
   a {
     &:hover {
       color: $dominantColor;

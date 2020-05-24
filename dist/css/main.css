@@ -281,6 +281,8 @@ h2 {
     font-size: 0.8rem;
     text-transform: uppercase;
     padding: 1rem 1.5rem; }
+  #main-nav ul #section-christina .current {
+    color: #900000; }
   #main-nav ul a:hover {
     color: #900000; }
   #main-nav ul a.current {
