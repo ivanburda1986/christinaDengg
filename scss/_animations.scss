@@ -16,7 +16,7 @@
 }
 
 //Overlay intro animation
-#welcome-overlay1 {
+#welcome-video-overlay {
   display: flex;
   // display: grid;
   // grid-template-columns: repeat(8, 1fr);
@@ -30,9 +30,30 @@
   left: 0;
   z-index: 3;
   overflow-y: hidden;
-
+  visibility: hidden;
   background: red;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &.hide {
+    visibility: hidden;
+  }
 }
+
+#welcome-video-container {
+  //background: pink;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+// #welcome-video-container{
+//   //background: green;
+//   width: 80%;
+//   height: 80%;
+// }
 
 
 

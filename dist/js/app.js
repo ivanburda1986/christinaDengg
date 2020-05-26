@@ -1,8 +1,10 @@
 //Initialize the Gallery UI
 const gallery = new galleryUI();
 const video = new videoUI();
+const welcomeVideo = new welcomeVideoUI();
 
 //UI Selectors
+const welcomeVideoButton = document.getElementById("play-video-btn");
 const galleryHideButton = document.getElementById("gallery-hide-btn");
 const galleryGrid = document.getElementById("gallery-grid");
 const nextButton = document.getElementById("gallery-next-btn");
@@ -20,6 +22,15 @@ function getCurrentFullPhotoNumber() {
   const currentFullPhotoNumber = photos.indexOf(currentFullPhoto) + 1;
   return currentFullPhotoNumber;
 }
+
+//WELCOME
+//Play a video
+// welcomeVideoButton.addEventListener("click", (e) => {
+//   welcomeVideo.showVideoOverlay();
+//   welcomeVideo.playVideo();
+//   console.log("click");
+// });
+
 
 //PERFORMANCE
 //Launch a video

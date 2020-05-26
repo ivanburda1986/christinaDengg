@@ -20,7 +20,8 @@
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #dedede; }
+  color: #dedede;
+  outline: none; }
   .btn:hover {
     color: #900000;
     border: 1px solid #900000;
@@ -32,7 +33,7 @@
     height: 100%;
     max-height: 100%; }
 
-#welcome-overlay1 {
+#welcome-video-overlay {
   display: flex;
   height: 100vh;
   width: 100%;
@@ -41,7 +42,17 @@
   left: 0;
   z-index: 3;
   overflow-y: hidden;
+  visibility: hidden;
   background: red; }
+  #welcome-video-overlay.show {
+    visibility: visible; }
+  #welcome-video-overlay.hide {
+    visibility: hidden; }
+
+#welcome-video-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto; }
 
 #performance-showcases .performance-showcase:hover .performance-showcase-background {
   background: rgba(0, 0, 0, 0.8); }
