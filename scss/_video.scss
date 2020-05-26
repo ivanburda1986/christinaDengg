@@ -24,18 +24,26 @@
 }
 
 #video-hide-btn {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0);
   display: block;
   color: $textColorLight;
   outline: 0;
   border: none;
-  width: 4rem;
-  height: 4rem;
+  width: 5.5rem;
+  height: 5.5rem;
   font-size: 4rem;
   align-self: flex-end;
   justify-self: end;
-  margin-right: 2rem;
+  margin-right: 6rem;
+  cursor: pointer;
+  @include transition-mediumTime;
   //background: yellow;
+}
+
+#video-hide-btn:hover {
+  transform: rotate(360deg);
+  color: $dominantColor;
+  font-size: 5rem;
 }
 
 #video-container {
@@ -43,6 +51,10 @@
   width: 80vw;
   height: 80vh;
   margin: 0 auto;
+  border-top: 1rem solid $dominantColor;
+  border-right: 2rem solid $dominantColor;
+  border-bottom: 2.5rem solid $dominantColorShadow;
+  border-left: 2rem solid $dominantColor;
 }
 
 #video-container iframe {

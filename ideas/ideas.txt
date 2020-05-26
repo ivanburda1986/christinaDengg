@@ -106,6 +106,7 @@ Favicon
 -from the site logo
 
 Additional
+-scrollbar
 -add the real content
 -responsiveness
 -accessibility
