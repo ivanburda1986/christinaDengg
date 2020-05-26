@@ -32,14 +32,14 @@
     height: 100%;
     max-height: 100%; }
 
-#welcome-overlay {
+#welcome-overlay1 {
   display: flex;
   height: 100vh;
   width: 100%;
   margin: 0;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   overflow-y: hidden;
   background: red; }
 
@@ -133,7 +133,7 @@
   margin: 0;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   overflow-y: hidden;
   background: rgba(0, 0, 0, 0.7);
   visibility: hidden; }
@@ -154,25 +154,47 @@
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  margin: 0 auto; }
+  margin: auto;
+  align-self: center; }
 
 #gallery-hide-btn {
   grid-area: hideButton;
-  width: 4rem;
-  height: 100%;
+  display: block;
+  width: 5.5rem;
+  height: 5.5rem;
   font-size: 4rem;
   align-self: flex-end;
   justify-self: end;
-  margin-right: 2rem; }
+  margin-right: 6rem;
+  cursor: pointer;
+  z-index: 5;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; }
+
+#gallery-hide-btn:hover {
+  transform: rotate(360deg);
+  color: #900000;
+  font-size: 5rem; }
 
 #gallery-previous-btn {
-  grid-area: previousButton; }
+  grid-area: previousButton;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+
+#gallery-previous-btn:hover {
+  color: #900000; }
 
 #gallery-next-btn {
-  grid-area: nextButton; }
+  grid-area: nextButton;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+
+#gallery-next-btn:hover {
+  color: #900000; }
 
 #gallery-full-photo-container {
-  display: block;
+  display: flex;
   grid-area: fullPhoto;
   width: auto;
   height: 100%;
@@ -198,7 +220,7 @@
   margin: 0;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   overflow-y: hidden;
   background: rgba(0, 0, 0, 0.9);
   visibility: hidden; }
@@ -260,11 +282,11 @@ body {
 
 /* Scrollbar width */
 ::-webkit-scrollbar {
-  width: 8px; }
+  width: 10px; }
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; }
+  background: #2e2c2cf3; }
 
 /* Scrollbar Handle */
 ::-webkit-scrollbar-thumb {
@@ -272,7 +294,7 @@ body {
 
 /* Scrollbar Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; }
+  background: #900000; }
 
 a {
   text-decoration: none;
@@ -295,7 +317,7 @@ h2 {
   top: 0;
   position: sticky;
   display: flex;
-  z-index: 3;
+  z-index: 4;
   min-height: 3rem;
   background: #000; }
 
@@ -320,6 +342,7 @@ h2 {
   background: url("../img/frontpage-background-landscape-v1.png") no-repeat center center/cover; }
 
 #welcome-background {
+  margin-top: -70px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

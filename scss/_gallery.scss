@@ -11,7 +11,7 @@
   margin: 0;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   overflow-y: hidden;
   background: rgba(0, 0, 0, 0.7);
   visibility: hidden;
@@ -38,7 +38,8 @@
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  margin: 0 auto;
+  margin: auto;
+  align-self: center;
 }
 
 
@@ -47,27 +48,49 @@
 #gallery-hide-btn {
   @extend %galleryButtonShared;
   grid-area: hideButton;
-  width: 4rem;
-  height: 100%;
+  display: block;
+  width: 5.5rem;
+  height: 5.5rem;
   font-size: 4rem;
   align-self: flex-end;
   justify-self: end;
-  margin-right: 2rem;
+  margin-right: 6rem;
+  cursor: pointer;
+  z-index: 5;
+  @include transition-mediumTime;
+}
+
+#gallery-hide-btn:hover {
+  transform: rotate(360deg);
+  color: $dominantColor;
+  font-size: 5rem;
 }
 
 
 #gallery-previous-btn {
   @extend %galleryButtonShared;
   grid-area: previousButton;
+  cursor: pointer;
+  @include transition-littleTime;
+}
+
+#gallery-previous-btn:hover {
+  color: $dominantColor;
 }
 
 #gallery-next-btn {
   @extend %galleryButtonShared;
   grid-area: nextButton;
+  cursor: pointer;
+  @include transition-littleTime;
+}
+
+#gallery-next-btn:hover {
+  color: $dominantColor;
 }
 
 #gallery-full-photo-container {
-  display: block;
+  display: flex;
   grid-area: fullPhoto;
   width: auto;
   height: 100%;
@@ -76,6 +99,7 @@
   justify-content: center;
   justify-items: center;
   background: rgba(0, 0, 0, 0.7);
+
 }
 
 #gallery-full-photo-description {

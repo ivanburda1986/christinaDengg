@@ -26,12 +26,13 @@ body {
 
 /* Scrollbar width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  //background: #f1f1f1;
+  background: $placeholderColor;
 }
 
 /* Scrollbar Handle */
@@ -41,7 +42,8 @@ body {
 
 /* Scrollbar Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  //background: #555;
+  background: $dominantColor;
 }
 
 
@@ -73,7 +75,7 @@ h2 {
   top: 0;
   position: sticky;
   display: flex;
-  z-index: 3;
+  z-index: 4;
   min-height: 3rem;
   background: $backgroundDarkColor;
 }
@@ -119,7 +121,7 @@ h2 {
 }
 
 #welcome-background {
-  //margin-top: -70px;
+  margin-top: -70px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -16,7 +16,7 @@
 }
 
 //Overlay intro animation
-#welcome-overlay {
+#welcome-overlay1 {
   display: flex;
   // display: grid;
   // grid-template-columns: repeat(8, 1fr);
@@ -28,7 +28,7 @@
   margin: 0;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   overflow-y: hidden;
 
   background: red;
