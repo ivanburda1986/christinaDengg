@@ -115,11 +115,12 @@ Additional
 -insert the youtube videos via API and close the player automatically when the video finishes http://jsfiddle.net/7Gznb/
 
 -------------------------------------------------------------------------------------
-//FINISHING - TODO
--favicon
+//FINISHING
+-favicon  --DONE
 -refactoring (incl. responsiveness, accessibility)
 -add real content (the videos should be hosted on vimeo)
 -host on netlify with an .eu domain from wedos
+-make the gallery and video overlays modulas, so that I can re-use them in other projects
 
 
 
