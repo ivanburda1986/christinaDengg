@@ -14,7 +14,7 @@
     rel="stylesheet" />
   <!--Styles-->
   <link rel="stylesheet" href="css/main.css" />
-  <title>Christina Dengg - Poledance Trainer</title>
+  <title>Christina Dengg - Pole Dance Artist & Instructor</title>
   <!--Favicon-->
   <link rel='icon' href='favicon.ico' type='image/x-icon' />
 </head>
@@ -23,16 +23,16 @@
   <!--Navbar-->
   <nav id="main-nav">
     <ul>
-      <li class="main-nav-btn">
+      <li>
         <a id="nav-welcome" href="#section-welcome" class="main-nav-btn-link current">Welcome</a>
       </li>
-      <li class="main-nav-btn">
-        <a id="nav-christina" class="main-nav-btn-link" href="#section-christina">Christina</a>
+      <li>
+        <a id="nav-christina" href="#section-christina" class="main-nav-btn-link">Christina</a>
       </li>
-      <li class="main-nav-btn">
+      <li>
         <a id="nav-performance" href="#section-performance" class="main-nav-btn-link">Performance</a>
       </li>
-      <li class="main-nav-btn">
+      <li>
         <a id="nav-gallery" href="#section-gallery" class="main-nav-btn-link">Gallery</a>
       </li>
       <li class="social-media-link">
@@ -46,9 +46,9 @@
 
   <!--Welcome-->
   <section id="section-welcome" class="section">
-    <!--Welcome content-->
+    <!--Welcome background-->
     <div id="welcome-background">
-      <!--Welcome intro animation overlay-->
+      <!--Welcome video overlay-->
       <div id="welcome-video-overlay">
         <div id="welcome-video-container"></div>
       </div>
@@ -59,9 +59,9 @@
         Christina Dengg
       </div>
       <div id="welcome-subtitle" class="anim-opacity-startState">
-        Pole Dance Performer & Instructor
+        Pole Dance Artist & Instructor
       </div>
-      <!-- <button id="play-video-btn" class="btn">Play video</button>-->
+      <!-- <button id="play-welcome-video-btn" class="btn">Play video</button>-->
     </div>
   </section>
 
@@ -70,7 +70,7 @@
     <div class="container">
       <div class="content-canvas">
         <div id="christina-image" class="anim-opacity-startState anim-slideDown-startState">
-          <img src="img/aboutme-image.jpg" alt="" />
+          <img src="img/aboutme-image.jpg" alt="A profile image showing Christina doing pole dance." />
         </div>
         <div id="christina-text" class="anim-opacity-startState anim-slideRight-startState">
           <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
@@ -92,20 +92,18 @@
   <!--Performance-->
   <section id="section-performance" class="section">
     <div id="video-overlay">
-      <button id="video-hide-btn">×</button>
-      <div id="video-container">
-        <div class="video-shadow"></div>
-      </div>
+      <button id="video-hide-btn" class="overlay-hide-btn">×</button>
+      <div id="video-container"></div>
     </div>
     <div class="container">
       <div class="content-canvas">
-        <h1 id="performances-headline" class="anim-opacity-startState">
+        <h1 id="performances-headline" class="anim-opacity-startState section-headline">
           I always amaze my audiences with these performances. You won't take
           your eyes away.
         </h1>
         <div id="performance-showcases">
-          <div class="performance-showcase anim-opacity-delayed-startState anim-slideRight-startState"
-            id="performance1">
+          <div id="performance1"
+            class="performance-showcase anim-opacity-delayed-startState anim-slideRight-startState">
             <div class="performance-showcase-background">
               <div class="performance-showcase-text">Aerial dream</div>
               <div class="space-between"></div>
@@ -117,7 +115,7 @@
               <div class="space-under"></div>
             </div>
           </div>
-          <div class="performance-showcase anim-opacity-delayed-startState" id="performance2">
+          <div id="performance2" class="performance-showcase anim-opacity-delayed-startState">
             <div class="performance-showcase-background">
               <div class="performance-showcase-text">Exotic</div>
               <div class="space-between"></div>
@@ -129,7 +127,7 @@
               <div class="space-under"></div>
             </div>
           </div>
-          <div class="performance-showcase anim-opacity-delayed-startState anim-slideLeft-startState" id="performance3">
+          <div id="performance3" class="performance-showcase anim-opacity-delayed-startState anim-slideLeft-startState">
             <div class="performance-showcase-background">
               <div class="performance-showcase-text">Classical Pole</div>
               <div class="space-between"></div>
@@ -150,11 +148,11 @@
   <section id="section-gallery" class="section">
     <!--Gallery overlay-->
     <div id="gallery-overlay">
-      <button id="gallery-hide-btn">×</button>
-      <button id="gallery-previous-btn">
+      <button id="gallery-hide-btn" class="overlay-hide-btn">×</button>
+      <button id="gallery-previous-btn" class="overlay-previous-btn">
         <i class="fas fa-chevron-left fa-3x"></i>
       </button>
-      <button id="gallery-next-btn">
+      <button id="gallery-next-btn" class="overlay-next-btn">
         <i class="fas fa-chevron-right fa-3x"></i>
       </button>
       <div id="gallery-full-photo-container"></div>
@@ -163,7 +161,7 @@
     <!--Gallery grid-->
     <div class="container">
       <div class="content-canvas">
-        <h1 id="gallery-headline" class="anim-opacity-startState">
+        <h1 id="gallery-headline" class="anim-opacity-startState section-headline">
           Shots from the action
         </h1>
         <div id="gallery-grid"></div>

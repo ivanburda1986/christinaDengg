@@ -4,7 +4,7 @@ const video = new videoUI();
 const welcomeVideo = new welcomeVideoUI();
 
 //UI Selectors
-const welcomeVideoButton = document.getElementById("play-video-btn");
+const welcomeVideoButton = document.getElementById("play-welcome-video-btn");
 const galleryHideButton = document.getElementById("gallery-hide-btn");
 const galleryGrid = document.getElementById("gallery-grid");
 const nextButton = document.getElementById("gallery-next-btn");
