@@ -14,7 +14,7 @@ $textColorDark:#030303ff;
 /*UI Colors*/
 $backgroundLightColor: rgb(2, 2, 2);
 $backgroundDarkColor: #000;
-$backgroundTransparent: rgba(0, 0, 0, 0.8);
+$backgroundTransparent: rgba(0, 0, 0, 0.95);
 $backgroundComplementaryColor: #2e2c2cf3;
 $dominantColor: #900000;
 $dominantColorShadow: #3d0000;
@@ -25,3 +25,21 @@ $welcome-bg-image: url('../img/frontpage-background-landscape-v1.png');
 $performance1-image: url('../img/performances/performance1.jpg');
 $performance2-image: url('../img/performances/performance2.jpg');
 $performance3-image: url('../img/performances/performance3.jpg');
+
+
+//Transitions and animations
+@mixin transition-littleTime {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin transition-mediumTime {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin transition-muchTime {
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+}

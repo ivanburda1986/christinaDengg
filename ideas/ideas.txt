@@ -123,11 +123,6 @@ Additional
 -make the gallery and video overlays modulas, so that I can re-use them in other projects
 
 
-z-indexes:
-main-nav: 4
-welcome-titles: 3
-
-
 
 
 

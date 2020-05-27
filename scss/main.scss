@@ -2,6 +2,7 @@
 @import "config";
 @import "utilities";
 @import "animations";
+@import "performances";
 @import "gallery";
 @import "video";
 @import "media";
@@ -67,7 +68,7 @@ h2 {
   top: 0;
   position: sticky;
   display: flex;
-  z-index: 4;
+  z-index: 2;
   min-height: 3rem;
   background: $backgroundDarkColor;
 }
@@ -116,7 +117,7 @@ h2 {
   position: absolute;
   top: 50%;
   left: 10%;
-  z-index: 3;
+  z-index: 2;
 
   #welcome-title {
     font-size: 4.5rem;
@@ -131,6 +132,35 @@ h2 {
     color: $dominantColor;
   }
 }
+
+#play-welcome-video-btn {
+  padding: 1rem 2rem;
+  background: none;
+  border: 1px solid $textColorLight;
+  font-family: $UIfont;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: $textColorLight;
+  outline: none;
+
+  &:hover {
+    color: $dominantColor;
+    border: 1px solid $dominantColor;
+    cursor: pointer;
+  }
+}
+
+#welcome-video-overlay {
+  @extend %overlay;
+}
+
+#welcome-video-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+
 
 //Christina
 #section-christina {
@@ -314,6 +344,7 @@ footer {
   align-items: center;
   justify-items: center;
   text-align: center;
+  margin-top: 3rem;
 
   div {
     margin: auto;

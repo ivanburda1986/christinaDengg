@@ -1,27 +1,9 @@
 //Layout
 .container {
   max-width: $website-width;
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 15vw;
   margin-right: 15vw;
-}
-
-//UI Elements
-.btn {
-  padding: 1rem 2rem;
-  background: none;
-  border: 1px solid $textColorLight;
-  font-family: $UIfont;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: $textColorLight;
-  outline: none;
-
-  &:hover {
-    color: $dominantColor;
-    border: 1px solid $dominantColor;
-    cursor: pointer;
-  }
 }
 
 //Section styling
@@ -41,4 +23,62 @@
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+//Overlays
+%overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  overflow-y: hidden;
+  background: $backgroundTransparent;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &.hide {
+    visibility: hidden;
+  }
+}
+
+//Buttons
+%overlayButtonShared {
+  background: none;
+  color: $textColorLight;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  @include transition-littleTime;
+
+  &:hover {
+    color: $dominantColor;
+  }
+}
+
+.overlay-hide-btn {
+  @extend %overlayButtonShared;
+  display: block;
+  width: 5.5rem;
+  height: 5.5rem;
+  font-size: 4rem;
+  align-self: flex-end;
+  justify-self: end;
+  margin-right: 6rem;
+  @include transition-mediumTime;
+
+  &:hover {
+    transform: rotate(360deg);
+    font-size: 5rem;
+  }
+}
+
+.overlay-btn {
+  @extend %overlayButtonShared;
 }
