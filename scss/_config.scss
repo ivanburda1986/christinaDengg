@@ -1,32 +1,27 @@
-/* Variables */
+/*Container width */
 $website-width: 70vw;
 
-$textColorLight: #dedede;
-$textColorDark:#030303ff;
-
-$backgroundLightColor: rgb(2, 2, 2);
-$backgroundDarkColor: #000;
-
-$dominantColor: #900000;
-$dominantColorShadow: #3d0000;
-
-$placeholderColor: #2e2c2cf3;
-
+/*Fonts*/
 $UIfont: "Montserrat",
 sans-serif;
 $decorativeFont: "Sacramento",
 cursive;
 
-$bg-image: url('../img/frontpage-background-landscape-v1.png');
+/*Text colors*/
+$textColorLight: #dedede;
+$textColorDark:#030303ff;
+
+/*UI Colors*/
+$backgroundLightColor: rgb(2, 2, 2);
+$backgroundDarkColor: #000;
+$backgroundTransparent: rgba(0, 0, 0, 0.8);
+$backgroundComplementaryColor: #2e2c2cf3;
+$dominantColor: #900000;
+$dominantColorShadow: #3d0000;
 
 
-
-
-/* Color Theme Swatches in RGBA */
-/*
-.color-theme_fish-1-rgba { color: rgba(217, 4, 4, 1); }
-.color-theme_fish-2-rgba { color: rgba(166, 3, 3, 1); }
-.color-theme_fish-3-rgba { color: rgba(115, 2, 2, 1); }
-.color-theme_fish-4-rgba { color: rgba(64, 1, 1, 1); }
-.color-theme_fish-5-rgba { color: rgba(13, 13, 13, 1); }
-*/
+/*Images*/
+$welcome-bg-image: url('../img/frontpage-background-landscape-v1.png');
+$performance1-image: url('../img/performances/performance1.jpg');
+$performance2-image: url('../img/performances/performance2.jpg');
+$performance3-image: url('../img/performances/performance3.jpg');

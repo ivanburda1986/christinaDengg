@@ -1,9 +1,9 @@
+@import "resets";
 @import "config";
 @import "utilities";
 @import "animations";
 @import "gallery";
 @import "video";
-@import "resets";
 @import "media";
 
 /*General styles*/
@@ -18,34 +18,7 @@ body {
   color: $textColorLight;
   background: $backgroundDarkColor;
   scroll-behavior: smooth;
-  //background: $bg-image fixed center/cover;
-  //background: url('../img/backgrounds/dark1.jpg') fixed center/cover;
 }
-
-
-
-/* Scrollbar width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Scrollbar Track */
-::-webkit-scrollbar-track {
-  //background: #f1f1f1;
-  background: $placeholderColor;
-}
-
-/* Scrollbar Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Scrollbar Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  //background: #555;
-  background: $dominantColor;
-}
-
 
 a {
   text-decoration: none;
@@ -55,8 +28,6 @@ a {
 ul {
   list-style: none;
 }
-
-
 
 h1 {
   font-size: 3rem;
@@ -69,6 +40,27 @@ h2 {
   line-height: 2.5rem;
   padding-bottom: 0.5rem;
 }
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: $backgroundComplementaryColor;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $dominantColor;
+}
+
 
 // Navigation
 #main-nav {
@@ -85,19 +77,11 @@ h2 {
   margin: 0 auto;
 
   li {
-    font-family: "Montserrat", sans-serif;
+    font-family: $UIfont;
     font-size: 0.8rem;
     text-transform: uppercase;
     padding: 1rem 1.5rem;
   }
-
-  #section-christina {
-    .current {
-      color: $dominantColor;
-    }
-  }
-
-
 
   a {
     &:hover {
@@ -117,17 +101,15 @@ h2 {
 
 //Welcome
 #section-welcome {
-  background: $bg-image no-repeat center center / cover;
+  background: $welcome-bg-image no-repeat center center / cover;
 }
 
 #welcome-background {
   margin-top: -70px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
-
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 #welcome-titles {
@@ -136,12 +118,10 @@ h2 {
   left: 10%;
   z-index: 3;
 
-
   #welcome-title {
     font-size: 4.5rem;
     margin-bottom: 1rem;
     font-weight: 800;
-
   }
 
   #welcome-subtitle {
@@ -149,7 +129,6 @@ h2 {
     font-family: $decorativeFont;
     font-weight: 800;
     color: $dominantColor;
-
   }
 }
 
@@ -183,31 +162,22 @@ h2 {
   justify-self: self-start;
   justify-content: center;
   width: 80%;
-  max-width: 35rem;
-  //background: url('../img/backgrounds/christina-section-background.png') no-repeat center;
-  //background-size: contain;
+
 }
 
-//Performance
+//Performances
 #section-performance {
   @extend %section-shared;
 
   .content-canvas {
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-content: center;
-    text-align: center;
     justify-items: center;
   }
 
-}
-
-#performances-headline {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 #performance-showcases {
@@ -220,63 +190,57 @@ h2 {
 
   .performance-showcase {
     display: grid;
-    background: yellow;
     width: 90%;
     max-width: 400px;
     height: 500px;
-
-
   }
 
   #performance1 {
-    background: url('../img/performances/performance1.jpg') center;
+    background: $performance1-image center;
     background-size: cover;
     margin-left: -4rem;
   }
 
   #performance2 {
-    background: url('../img/performances/performance2.jpg') center;
+    background: $performance2-image center;
     background-size: cover;
   }
 
   #performance3 {
-    background: url('../img/performances/performance3.jpg') center;
+    background: $performance3-image center;
     background-size: cover;
-
     margin-right: -4rem;
   }
 
   .performance-showcase-background {
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.0);
-    transition: all 1s;
     align-items: center;
     align-content: flex-end;
     justify-content: flex-end;
     padding-bottom: 30%;
+    @include transition-mediumTime;
   }
 
   .performance-showcase-text {
     width: 100%;
     font-size: 3.5rem;
     font-weight: 800;
-    transition: all 1s;
-    visibility: 0;
-    opacity: 0;
     font-family: $decorativeFont;
+    opacity: 0;
+    @include transition-mediumTime;
   }
 
   .space-between {
     width: 100%;
     height: 30px;
-    transition: all 1s;
+    @include transition-mediumTime;
   }
 
   .space-under {
     width: 100%;
     height: 0px;
-    transition: all 1s;
+    @include transition-mediumTime;
   }
 
   .performance-showcase-button {
@@ -288,12 +252,11 @@ h2 {
     height: 3rem;
     width: 50%;
     border: 2px solid #ffffff;
-    background: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
+    background: $backgroundTransparent;
+    color: $textColorLight;
     text-transform: uppercase;
-    transition: all 1s;
-    visibility: 0;
     opacity: 0;
+    @include transition-mediumTime;
   }
 
 }
@@ -312,13 +275,6 @@ h2 {
   }
 }
 
-#gallery-headline {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 #gallery-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -328,7 +284,6 @@ h2 {
   justify-content: space-between;
 
   .gallery-thumbnail {
-    background: $placeholderColor;
     width: 100%;
     height: 250px;
     overflow: hidden;
@@ -342,7 +297,6 @@ h2 {
     }
 
     img:hover {
-      //transform: translateX(20%);
       transform: translate(-15%, -5%);
       width: 120%;
       height: 120%;
@@ -355,7 +309,6 @@ footer {
   display: flex;
   flex-direction: column;
   background: $backgroundLightColor;
-  ;
   width: 100%;
   height: 15rem;
   align-items: center;
@@ -366,7 +319,7 @@ footer {
     margin: auto;
 
     p {
-      font-family: "Montserrat", sans-serif;
+      font-family: $UIfont;
       font-size: 0.8rem;
       padding: 0rem 1.5rem;
 
