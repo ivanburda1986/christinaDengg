@@ -425,3 +425,44 @@ footer {
       padding: 0rem 1.5rem;
       color: #dedede;
       margin: auto; }
+
+@media screen and (max-width: 1000px) {
+  /*Container width */
+  .container {
+    margin-left: 5vw;
+    margin-right: 5vw; }
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 0.5rem; }
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding-bottom: 0.5rem; }
+  #main-nav ul {
+    display: none; } }
+
+/*Images*/
+#section-welcome {
+  background: url("../img/backgrounds/frontpage-background-vertical-v1.jpg") no-repeat center center/cover; }
+  #section-welcome #welcome-titles {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 2; }
+    #section-welcome #welcome-titles #welcome-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800; }
+    #section-welcome #welcome-titles #welcome-subtitle {
+      font-size: 1.2rem;
+      font-family: "Sacramento", cursive;
+      font-weight: 800;
+      color: #900000; }
+  #section-welcome #section-christina .content-canvas {
+    display: flex;
+    grid-template-columns: 1fr;
+    align-content: space-around;
+    grid-gap: 0rem;
+    justify-items: center;
+    justify-content: space-between; }

@@ -1,0 +1,70 @@
+//Responsiveness
+@include media-sm {
+
+  /*Container width */
+  $website-width: 90vw;
+
+  .container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  //General
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+
+  //Navigation
+  #main-nav ul {
+    display: none;
+  }
+}
+
+/*Images*/
+#section-welcome {
+  background: url('../img/backgrounds/frontpage-background-vertical-v1.jpg') no-repeat center center / cover;
+
+  #welcome-titles {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 2;
+
+    #welcome-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+    }
+
+    #welcome-subtitle {
+      font-size: 1.2rem;
+      font-family: $decorativeFont;
+      font-weight: 800;
+      color: $dominantColor;
+    }
+
+  }
+
+  //Christina
+  #section-christina {
+    .content-canvas {
+      display: flex;
+      grid-template-columns: 1fr;
+      align-content: space-around;
+      grid-gap: 0rem;
+      justify-items: center;
+      justify-content: space-between;
+    }
+  }
+
+
+}

@@ -5,7 +5,7 @@
 @import "performances";
 @import "gallery";
 @import "video";
-@import "media";
+
 
 /*General styles*/
 
@@ -332,3 +332,5 @@ footer {
   }
 
 }
+
+@import "responsive";
