@@ -133,34 +133,6 @@ h2 {
   }
 }
 
-#play-welcome-video-btn {
-  padding: 1rem 2rem;
-  background: none;
-  border: 1px solid $textColorLight;
-  font-family: $UIfont;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: $textColorLight;
-  outline: none;
-
-  &:hover {
-    color: $dominantColor;
-    border: 1px solid $dominantColor;
-    cursor: pointer;
-  }
-}
-
-#welcome-video-overlay {
-  @extend %overlay;
-}
-
-#welcome-video-container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-}
-
-
 
 //Christina
 #section-christina {
@@ -305,7 +277,7 @@ h2 {
   }
 }
 
-#gallery-grid {
+#gallery-overview {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-content: center;

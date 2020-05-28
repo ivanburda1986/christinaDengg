@@ -1,6 +1,6 @@
 class galleryUI {
   constructor() {
-    this.galleryOverview = document.getElementById("gallery-grid");
+    this.galleryOverview = document.getElementById("gallery-overview");
     this.galleryOverlay = document.getElementById("gallery-overlay");
     this.fullPhotoContainer = document.getElementById("gallery-full-photo-container");
     this.currentFullPhotoDescription = document.getElementById("gallery-full-photo-description");
@@ -30,7 +30,6 @@ class galleryUI {
   }
 
   showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber) {
-
     let nextPhotoNumber;
     if (currentFullPhotoNumber === ultimatePhotoNumber) {
       nextPhotoNumber = 1;
@@ -54,9 +53,8 @@ class galleryUI {
 
   }
 
-  showCurrentFullPhotoDescription(funkce, ultimatePhotoNumber) {
-    let current = funkce();
-    this.currentFullPhotoDescription.innerHTML = `<p>${current}/${ultimatePhotoNumber}</p>`;
+  showCurrentFullPhotoDescription(getCurrentFullPhotoNumber, ultimatePhotoNumber) {
+    this.currentFullPhotoDescription.innerHTML = `<p>${getCurrentFullPhotoNumber()}/${ultimatePhotoNumber}</p>`;
   }
 
   clearPreviousFullPhotoDescription() {

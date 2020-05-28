@@ -28,7 +28,7 @@
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-#gallery-overlay, #video-overlay, #welcome-video-overlay {
+#gallery-overlay, #video-overlay {
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -39,9 +39,9 @@
   overflow-y: hidden;
   background: rgba(0, 0, 0, 0.95);
   visibility: hidden; }
-  .show#gallery-overlay, .show#video-overlay, .show#welcome-video-overlay {
+  .show#gallery-overlay, .show#video-overlay {
     visibility: visible; }
-  .hide#gallery-overlay, .hide#video-overlay, .hide#welcome-video-overlay {
+  .hide#gallery-overlay, .hide#video-overlay {
     visibility: hidden; }
 
 .overlay-hide-btn, .overlay-btn {
@@ -278,25 +278,6 @@ h2 {
     font-weight: 800;
     color: #900000; }
 
-#play-welcome-video-btn {
-  padding: 1rem 2rem;
-  background: none;
-  border: 1px solid #dedede;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: #dedede;
-  outline: none; }
-  #play-welcome-video-btn:hover {
-    color: #900000;
-    border: 1px solid #900000;
-    cursor: pointer; }
-
-#welcome-video-container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto; }
-
 #section-christina .content-canvas {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -404,24 +385,24 @@ h2 {
   text-align: center;
   justify-items: center; }
 
-#gallery-grid {
+#gallery-overview {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-content: center;
   grid-gap: 1.5rem;
   justify-items: center;
   justify-content: space-between; }
-  #gallery-grid .gallery-thumbnail {
+  #gallery-overview .gallery-thumbnail {
     width: 100%;
     height: 250px;
     overflow: hidden; }
-    #gallery-grid .gallery-thumbnail img {
+    #gallery-overview .gallery-thumbnail img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: all 0.5s ease-in-out;
       cursor: pointer; }
-    #gallery-grid .gallery-thumbnail img:hover {
+    #gallery-overview .gallery-thumbnail img:hover {
       transform: translate(-15%, -5%);
       width: 120%;
       height: 120%; }

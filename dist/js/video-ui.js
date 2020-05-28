@@ -18,24 +18,3 @@ class videoUI {
   }
 
 }
-
-class welcomeVideoUI {
-  constructor() {
-    this.welcomeVideoOverlay = document.getElementById("welcome-video-overlay");
-    this.welcomeVideoContaier = document.getElementById("welcome-video-container");
-  }
-  showVideoOverlay() {
-    this.welcomeVideoOverlay.classList.add("show");
-    this.welcomeVideoOverlay.classList.remove("hide");
-  }
-
-  hideVideoOverlay() {
-    this.welcomeVideoOverlay.classList.add("hide");
-    this.welcomeVideoContaier.innerHTML = ``;
-  }
-
-  playVideo() {
-    this.welcomeVideoContaier.innerHTML = ``;
-  }
-
-}
