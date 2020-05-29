@@ -44,6 +44,7 @@ $performance3-image: url('../img/performances/performance3.jpg');
   transition-timing-function: ease-in-out;
 }
 
+//Width
 @mixin media-sm {
   @media screen and (max-width: 1000px) {
     @content;
@@ -57,14 +58,27 @@ $performance3-image: url('../img/performances/performance3.jpg');
   }
 }
 
-@mixin media-lg {
-  @media screen and (min-width: 1024px) {
+@mixin width-max-1024 {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin media-xl {
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1920) {
+    @content;
+  }
+}
+
+//Height
+@mixin height-max-768 {
+  @media screen and (max-height: 768px) {
+    @content;
+  }
+}
+
+@mixin height-min-1080 {
+  @media screen and (min-height: 1080px) {
     @content;
   }
 }

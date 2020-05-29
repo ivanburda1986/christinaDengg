@@ -1,70 +1,149 @@
 //Responsiveness
-@include media-sm {
 
-  /*Container width */
-  $website-width: 90vw;
 
-  .container {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
+//WIDTHS
+@include width-max-1024 {
 
   //General
   h1 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding-bottom: 0.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   h2 {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 
-
-  //Navigation
-  #main-nav ul {
-    display: none;
+  //Section styling
+  .section-headline {
+    width: 100%;
   }
-}
 
-/*Images*/
-#section-welcome {
-  background: url('../img/backgrounds/frontpage-background-vertical-v1.jpg') no-repeat center center / cover;
-
+  //Welcome
   #welcome-titles {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    z-index: 2;
-
     #welcome-title {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      font-weight: 800;
+      font-size: 3.5rem;
     }
 
     #welcome-subtitle {
-      font-size: 1.2rem;
-      font-family: $decorativeFont;
-      font-weight: 800;
-      color: $dominantColor;
+      font-size: 2rem;
     }
+  }
+}
 
+
+
+
+@include width-max-1024 {
+
+  //Config
+  #section-welcome {
+    background: url('../img/backgrounds/frontpage-background-vertical-v3.png') no-repeat center center / cover;
+  }
+
+  //General
+  .container {
+    max-width: 85vw;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+  }
+
+  //Utilities
+  .overlay-hide-btn {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 3rem;
+    margin-right: 4rem;
+
+    &:hover {
+      font-size: 4rem;
+    }
   }
 
   //Christina
   #section-christina {
     .content-canvas {
-      display: flex;
+      display: grid;
+      grid-template-areas: "text"
+        "image";
       grid-template-columns: 1fr;
-      align-content: space-around;
-      grid-gap: 0rem;
+      align-content: center;
+      grid-gap: 4rem;
       justify-items: center;
-      justify-content: space-between;
+      justify-content: center;
     }
   }
 
+  #christina-image {
+    grid-area: image;
+    width: 60%;
+    justify-self: center;
 
+    img {
+      margin: auto 0;
+      width: 100%;
+    }
+  }
+
+  #christina-text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    width: 80%;
+
+  }
+
+}
+
+
+
+
+//HEIGHTS
+
+@include height-max-768 {
+
+  //General
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+
+  //Section styling
+  .section-headline {
+    width: 100%;
+  }
+
+  //Welcome
+  #welcome-titles {
+    #welcome-title {
+      font-size: 3.5rem;
+    }
+
+    #welcome-subtitle {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include height-min-1080 {
+
+  //Layout
+  .container {
+    max-height: 1080px;
+  }
+
+  //Section styling
+  %section-shared {
+    height: 100%;
+    min-height: 1080px;
+    max-height: 1080px;
+  }
 }
