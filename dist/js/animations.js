@@ -6,10 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //NAVBAR - Section-scrollbased highlighting
 window.addEventListener('scroll', () => {
-  animateOnScroll("christina-image", "anim-opacity-endState", 50);
-  animateOnScroll("christina-image", "anim-slideRight-endState", 50);
-  animateOnScroll("christina-text", "anim-opacity-endState", 50);
-  animateOnScroll("christina-text", "anim-slideLeft-endState", 50);
   animateOnScroll("performances-headline", "anim-opacity-endState", 25);
   animateOnScroll("performance1", "anim-opacity-delayed-endState", 50);
   animateOnScroll("performance1", "anim-slideRight-endState", 50);
@@ -17,6 +13,18 @@ window.addEventListener('scroll', () => {
   animateOnScroll("performance3", "anim-opacity-delayed-endState", 50);
   animateOnScroll("performance3", "anim-slideLeft-endState", 50);
   animateOnScroll("gallery-headline", "anim-opacity-endState", 25);
+
+  let windowInnerWidth = window.innerWidth;
+  if (windowInnerWidth <= 1024) {
+    animateOnScroll("christina-image", "anim-opacity-endState", 50);
+    animateOnScroll("christina-text", "anim-opacity-endState", 50);
+  } else {
+    animateOnScroll("christina-image", "anim-opacity-endState", 50);
+    animateOnScroll("christina-image", "anim-slideRight-endState", 50);
+    animateOnScroll("christina-text", "anim-opacity-endState", 50);
+    animateOnScroll("christina-text", "anim-slideLeft-endState", 50);
+  }
+
 });
 
 

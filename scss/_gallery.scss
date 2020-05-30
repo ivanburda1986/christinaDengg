@@ -25,10 +25,12 @@
 
 #gallery-previous-btn {
   grid-area: previousButton;
+  min-width: 3rem;
 }
 
 #gallery-next-btn {
   grid-area: nextButton;
+  min-width: 3rem;
 }
 
 #gallery-full-photo-container {

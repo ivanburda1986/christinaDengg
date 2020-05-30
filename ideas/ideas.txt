@@ -118,6 +118,10 @@ Additional
 //FINISHING
 -favicon  --DONE
 -refactoring (incl. responsiveness, accessibility)
+--thumbnails should be from smaller photos, not from the big ones
+--what about hover animations on touch devices? Maybe a workardound could be a screen-size. On-scroll the performances would animate to the hovered state.
+
+
 -add real content (the videos should be hosted on vimeo)
 -host on netlify with an .eu domain from wedos
 -make the gallery and video overlays modulas, so that I can re-use them in other projects

@@ -91,7 +91,8 @@
 .anim-slideDown-startState {
   transition-property: all;
   transition-duration: 1s;
-  transition-timing-function: ease-in-out; }
+  transition-timing-function: ease-in-out;
+  transform: translateY(-2rem); }
 
 .anim-slideDown-endState {
   transform: translateY(2rem); }
@@ -148,10 +149,12 @@
   grid-area: hideButton; }
 
 #gallery-previous-btn {
-  grid-area: previousButton; }
+  grid-area: previousButton;
+  min-width: 3rem; }
 
 #gallery-next-btn {
-  grid-area: nextButton; }
+  grid-area: nextButton;
+  min-width: 3rem; }
 
 #gallery-full-photo-container {
   grid-area: fullPhoto;
@@ -427,6 +430,12 @@ footer {
       margin: auto; }
 
 @media screen and (max-width: 1024px) {
+  #section-welcome {
+    background: url("../img/backgrounds/frontpage-background-vertical-v3.png") no-repeat center center/cover; }
+  .container {
+    max-width: 85vw;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw; }
   h1 {
     font-size: 2.25rem;
     line-height: 2.5rem; }
@@ -435,18 +444,6 @@ footer {
     line-height: 2rem; }
   .section-headline {
     width: 100%; }
-  #welcome-titles #welcome-title {
-    font-size: 3.5rem; }
-  #welcome-titles #welcome-subtitle {
-    font-size: 2rem; } }
-
-@media screen and (max-width: 1024px) {
-  #section-welcome {
-    background: url("../img/backgrounds/frontpage-background-vertical-v3.png") no-repeat center center/cover; }
-  .container {
-    max-width: 85vw;
-    margin-left: 7.5vw;
-    margin-right: 7.5vw; }
   .overlay-hide-btn {
     width: 4.5rem;
     height: 4.5rem;
@@ -454,17 +451,21 @@ footer {
     margin-right: 4rem; }
     .overlay-hide-btn:hover {
       font-size: 4rem; }
+  #welcome-titles #welcome-title {
+    font-size: 3.5rem; }
+  #welcome-titles #welcome-subtitle {
+    font-size: 2rem; }
   #section-christina .content-canvas {
     display: grid;
     grid-template-areas: "text" "image";
     grid-template-columns: 1fr;
     align-content: center;
-    grid-gap: 4rem;
+    grid-gap: 3rem;
     justify-items: center;
     justify-content: center; }
   #christina-image {
     grid-area: image;
-    width: 60%;
+    width: 50%;
     justify-self: center; }
     #christina-image img {
       margin: auto 0;
@@ -475,7 +476,17 @@ footer {
     flex-direction: column;
     justify-self: center;
     justify-content: center;
-    width: 80%; } }
+    width: 80%;
+    text-align: center; } }
+
+#video-container {
+  width: 100vw;
+  height: 80vh;
+  margin: 0 auto;
+  border-top: 1rem solid #900000;
+  border-right: none;
+  border-bottom: 2.5rem solid #3d0000;
+  border-left: none; }
 
 @media screen and (max-height: 768px) {
   h1 {

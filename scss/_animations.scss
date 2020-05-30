@@ -17,9 +17,13 @@
   opacity: 1;
 }
 
+
+
+
 //Slide a bit down;
 .anim-slideDown-startState {
   @include transition-mediumTime;
+  transform: translateY(-2rem);
 }
 
 .anim-slideDown-endState {
