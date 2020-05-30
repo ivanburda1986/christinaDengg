@@ -4,7 +4,48 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById("welcome-subtitle").classList.add("anim-opacity-endState");
 });
 
-//NAVBAR - Section-scrollbased highlighting
+//NAVIGATION
+document.getElementById("burger-toggler").addEventListener("click", (e) => {
+  console.log(e.srcElement.checked);
+  if (e.srcElement.checked) {
+    document.getElementById("main-nav-mobile-menu-options").classList.add("anim-slideToScreen-endState");
+    document.getElementById("burger").classList.add("burger-animate-endState");
+
+  } else {
+    document.getElementById("main-nav-mobile-menu-options").classList.remove("anim-slideToScreen-endState");
+    document.getElementById("burger").classList.remove("burger-animate-endState");
+  }
+})
+
+//Dynamic highlighting in the horizontal navigation
+window.addEventListener('scroll', () => {
+  let windowInnerWidth = window.innerWidth;
+  if (windowInnerWidth <= 700) {
+    navigationLinkHighlighting("nav-mobile-welcome", "section-welcome");
+    navigationLinkHighlighting("nav-mobile-christina", "section-christina");
+    navigationLinkHighlighting("nav-mobile-performance", "section-performance");
+    navigationLinkHighlighting("nav-mobile-gallery", "section-gallery");
+  } else {
+    navigationLinkHighlighting("nav-welcome", "section-welcome");
+    navigationLinkHighlighting("nav-christina", "section-christina");
+    navigationLinkHighlighting("nav-performance", "section-performance");
+    navigationLinkHighlighting("nav-gallery", "section-gallery");
+  }
+});
+
+function navigationLinkHighlighting(navigationElementSelector, triggeringElementSelector) {
+  let windowInnerHeight = window.innerHeight;
+  let navigationLink = document.getElementById(navigationElementSelector);
+  let triggerer = document.getElementById(triggeringElementSelector);
+  let triggererMiddle = triggerer.getBoundingClientRect().top + triggerer.getBoundingClientRect().height * 0.5;
+  if (triggererMiddle > 0 && triggererMiddle < windowInnerHeight) {
+    navigationLink.classList.add("current");
+  } else {
+    navigationLink.classList.remove("current");
+  }
+}
+
+//Section-scrollbased element displaying
 window.addEventListener('scroll', () => {
   animateOnScroll("performances-headline", "anim-opacity-endState", 25);
   animateOnScroll("performance1", "anim-opacity-delayed-endState", 50);
@@ -24,29 +65,7 @@ window.addEventListener('scroll', () => {
     animateOnScroll("christina-text", "anim-opacity-endState", 50);
     animateOnScroll("christina-text", "anim-slideLeft-endState", 50);
   }
-
 });
-
-
-//Dynamic highlighting in the horizontal navigation
-window.addEventListener('scroll', () => {
-  navigationLinkHighlighting("nav-welcome", "section-welcome");
-  navigationLinkHighlighting("nav-christina", "section-christina");
-  navigationLinkHighlighting("nav-performance", "section-performance");
-  navigationLinkHighlighting("nav-gallery", "section-gallery");
-});
-
-function navigationLinkHighlighting(navigationElementSelector, triggeringElementSelector) {
-  let windowInnerHeight = window.innerHeight;
-  let navigationLink = document.getElementById(navigationElementSelector);
-  let triggerer = document.getElementById(triggeringElementSelector);
-  let triggererMiddle = triggerer.getBoundingClientRect().top + triggerer.getBoundingClientRect().height * 0.5;
-  if (triggererMiddle > 0 && triggererMiddle < windowInnerHeight) {
-    navigationLink.classList.add("current");
-  } else {
-    navigationLink.classList.remove("current");
-  }
-}
 
 
 

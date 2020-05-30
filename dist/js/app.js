@@ -2,6 +2,28 @@
 const gallery = new galleryUI();
 const video = new videoUI();
 
+//NAVIGATION - mobile
+
+function closeMobileNavigation() {
+  document.getElementById("main-nav-mobile-menu-options").classList.remove("anim-slideToScreen-endState");
+  document.getElementById("burger").classList.remove("burger-animate-endState");
+  document.getElementById("burger-toggler").checked = false;
+}
+
+document.getElementById("nav-mobile-welcome").addEventListener("click", (e) => {
+  closeMobileNavigation();
+})
+document.getElementById("nav-mobile-christina").addEventListener("click", (e) => {
+  closeMobileNavigation();
+})
+document.getElementById("nav-mobile-performance").addEventListener("click", (e) => {
+  closeMobileNavigation();
+})
+document.getElementById("nav-mobile-gallery").addEventListener("click", (e) => {
+  closeMobileNavigation();
+})
+
+
 //PERFORMANCES
 //UI Selectors
 const aerialVideo = document.getElementById("aerial-video-btn");

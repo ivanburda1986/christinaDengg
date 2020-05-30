@@ -6,7 +6,6 @@
 @import "gallery";
 @import "video";
 
-
 /*General styles*/
 
 html {
@@ -62,7 +61,6 @@ h2 {
   background: $dominantColor;
 }
 
-
 // Navigation
 #main-nav {
   top: 0;
@@ -85,6 +83,8 @@ h2 {
   }
 
   a {
+    padding: 10px 20px;
+
     &:hover {
       color: $dominantColor;
     }
@@ -97,7 +97,120 @@ h2 {
   .social-media-link {
     padding-top: 0.75rem;
   }
+}
 
+#main-nav-mobile {
+  top: 0;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  min-height: 4rem;
+  height: 4rem;
+  max-height: 4rem;
+
+  background: $backgroundDarkColor;
+}
+
+#main-nav-mobile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  height: 4rem;
+  max-height: 4rem;
+  z-index: 2;
+  background: $backgroundDarkColor;
+  border-bottom: 2px solid $backgroundComplementaryColor;
+}
+
+#main-nav-mobile-burger-menu {
+  height: 50px;
+  width: 50px;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+#burger-container {
+  top: 30px;
+  position: absolute;
+
+  #burger-toggler {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -20px;
+    z-index: 2;
+    opacity: 0;
+  }
+}
+
+#burger {
+  position: absolute;
+  border: none;
+  width: 50px;
+  height: 4px;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 50px;
+    height: 4px;
+
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 4px;
+
+  }
+}
+
+#nav-social-icons button {
+  background: $backgroundTransparent;
+  border: none;
+  padding: 0 1rem;
+
+  &:hover {
+    color: $dominantColor;
+  }
+}
+
+#main-nav-mobile-menu-options {
+  border-bottom: 2px solid $backgroundComplementaryColor;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    li {
+      font-family: $UIfont;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+      text-align: center;
+    }
+
+    a {
+      padding: 10px 20px;
+
+      &:hover {
+        color: $dominantColor;
+      }
+
+      &.current {
+        color: $dominantColor;
+      }
+    }
+  }
 }
 
 //Welcome
@@ -133,7 +246,6 @@ h2 {
   }
 }
 
-
 //Christina
 #section-christina {
   @extend %section-shared;
@@ -164,7 +276,6 @@ h2 {
   justify-self: self-start;
   justify-content: center;
   width: 80%;
-
 }
 
 //Performances
@@ -179,7 +290,6 @@ h2 {
     align-content: center;
     justify-items: center;
   }
-
 }
 
 #performance-showcases {
@@ -260,7 +370,6 @@ h2 {
     opacity: 0;
     @include transition-mediumTime;
   }
-
 }
 
 //Gallery
@@ -330,7 +439,6 @@ footer {
       margin: auto;
     }
   }
-
 }
 
 @import "responsive";

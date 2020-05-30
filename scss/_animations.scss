@@ -17,9 +17,6 @@
   opacity: 1;
 }
 
-
-
-
 //Slide a bit down;
 .anim-slideDown-startState {
   @include transition-mediumTime;
@@ -46,4 +43,42 @@
 
 .anim-slideRight-endState {
   transform: translateX(2rem);
+}
+
+//Mobile navigation slide-in;
+.anim-slideToScreen-startState {
+  @include transition-littleTime;
+  transform: translateY(-500px);
+}
+
+.anim-slideToScreen-endState {
+  transform: translateY(0px);
+}
+
+//Burger menu on-toggler
+.burger-animate-startState {
+  @include transition-littleTime();
+  background-color: $textColorLight;
+
+  &::before {
+    @include transition-littleTime();
+    background-color: $textColorLight
+  }
+
+  &::after {
+    @include transition-littleTime();
+    background-color: $textColorLight
+  }
+}
+
+.burger-animate-endState {
+  &::before {
+    background: $dominantColor;
+    transform: translateX(10px) !important;
+  }
+
+  &::after {
+    background: $dominantColor;
+    transform: translateX(10px) !important;
+  }
 }

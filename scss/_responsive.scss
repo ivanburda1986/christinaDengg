@@ -1,7 +1,19 @@
 //Responsiveness
+//------------------WIDTHS------------------
+@include width-max-700 {
+  #main-nav {
+    display: none;
+  }
+
+  #main-nav-mobile {
+    display: flex;
+  }
+}
 
 
-//WIDTHS
+
+
+
 @include width-max-1024 {
 
   //Config
@@ -102,11 +114,17 @@
   border-left: none;
 }
 
+//GALLERY
+#gallery-overview {
+  .gallery-thumbnail {
+    height: 175px;
+  }
+}
 
 
 
-//HEIGHTS
 
+//-----------------HEIGHTS------------------
 @include height-max-768 {
 
   //General
