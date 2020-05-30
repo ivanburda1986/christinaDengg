@@ -593,6 +593,8 @@ footer {
     margin-right: 4rem; }
     .overlay-hide-btn:hover {
       font-size: 4rem; }
+  .overlay-hide-btn {
+    margin-right: 2rem; }
   #welcome-titles #welcome-title {
     font-size: 4rem; }
   #welcome-titles #welcome-subtitle {

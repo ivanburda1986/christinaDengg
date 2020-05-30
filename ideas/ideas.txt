@@ -108,18 +108,18 @@ Favicon
 Additional
 -scrollbar  --DONE
 -add the real content
--responsiveness
--accessibility
--refactoring
+-responsiveness  --DONE
+-accessibility  --DONE
+-refactoring  --DONE
 -host on netlify with an .eu domain from wedos
 -insert the youtube videos via API and close the player automatically when the video finishes http://jsfiddle.net/7Gznb/
 
 -------------------------------------------------------------------------------------
 //FINISHING
 -favicon  --DONE
--refactoring (incl. responsiveness, accessibility)
---thumbnails should be from smaller photos, not from the big ones
---what about hover animations on touch devices? Maybe a workardound could be a screen-size. On-scroll the performances would animate to the hovered state.
+-refactoring (incl. responsiveness, accessibility)  --DONE
+--thumbnails should be from smaller photos, not from the big ones  --DONE
+--what about hover animations on touch devices? Maybe a workardound could be a screen-size. On-scroll the performances would animate to the hovered state.  --DONE
 
 
 -add real content (the videos should be hosted on vimeo)
