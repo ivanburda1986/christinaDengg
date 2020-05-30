@@ -1,11 +1,5 @@
 //Responsiveness
 //------------------WIDTHS------------------
-
-@include width-max-400 {}
-
-
-
-
 @include width-max-768 {
 
   //Navigation
@@ -61,10 +55,6 @@
 }
 
 @include width-min-768 {
-  // #main-nav {
-  //   display: none;
-  // }
-
   #main-nav-mobile {
     display: none;
   }
@@ -189,12 +179,13 @@
 
 
 //-----------------HEIGHTS------------------
+
 @include height-max-768 {
 
   //General
   h1 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.25rem;
   }
 
   h2 {
@@ -203,6 +194,10 @@
   }
 
   //Section styling
+  %section-shared {
+    padding-top: 2rem;
+  }
+
   .section-headline {
     width: 100%;
   }
@@ -231,5 +226,38 @@
     height: 100%;
     min-height: 1080px;
     max-height: 1080px;
+  }
+}
+
+@include width-max-450-height-max-900 {
+
+  //General
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+
+  //Section styling
+
+
+  .section-headline {
+    width: 100%;
+  }
+
+  //Welcome
+  #welcome-titles {
+    #welcome-title {
+      font-size: 2rem;
+      line-height: 4rem;
+    }
+
+    #welcome-subtitle {
+      font-size: 1.4rem;
+    }
   }
 }

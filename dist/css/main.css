@@ -289,55 +289,54 @@ h2 {
   display: flex;
   flex-direction: column;
   z-index: 2;
-  min-height: 4rem;
-  height: 4rem;
-  max-height: 4rem;
+  min-height: 3rem;
+  height: 3rem;
+  max-height: 3rem;
   background: #000; }
 
 #main-nav-mobile-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 4rem;
-  height: 4rem;
-  max-height: 4rem;
+  min-height: 3rem;
+  height: 3rem;
+  max-height: 3rem;
   z-index: 2;
   background: #000;
   border-bottom: 2px solid #2e2c2cf3; }
 
 #main-nav-mobile-burger-menu {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-left: 2rem;
   cursor: pointer; }
 
 #burger-container {
-  top: 30px;
+  top: 20px;
   position: absolute; }
   #burger-container #burger-toggler {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: -20px;
     z-index: 2;
     opacity: 0; }
 
 #burger {
   position: absolute;
   border: none;
-  width: 50px;
+  width: 40px;
   height: 4px; }
   #burger::before {
     content: "";
     position: absolute;
     top: -10px;
-    width: 50px;
+    width: 40px;
     height: 4px; }
   #burger::after {
     content: "";
     position: absolute;
     top: 10px;
-    width: 50px;
+    width: 40px;
     height: 4px; }
 
 #nav-social-icons button {
@@ -372,7 +371,7 @@ h2 {
   background: url("../img/backgrounds/frontpage-background-landscape-v1.png") no-repeat center center/cover; }
 
 #welcome-background {
-  margin-top: -70px;
+  margin-top: -3rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -634,11 +633,13 @@ footer {
 
 @media screen and (max-height: 768px) {
   h1 {
-    font-size: 2.25rem;
-    line-height: 2.5rem; }
+    font-size: 2rem;
+    line-height: 2.25rem; }
   h2 {
     font-size: 1.75rem;
     line-height: 2rem; }
+  #section-christina, #section-performance, #section-gallery {
+    padding-top: 2rem; }
   .section-headline {
     width: 100%; }
   #welcome-titles #welcome-title {
@@ -653,3 +654,18 @@ footer {
     height: 100%;
     min-height: 1080px;
     max-height: 1080px; } }
+
+@media screen and (max-width: 450px) and (max-height: 900px) {
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.7rem; }
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.7rem; }
+  .section-headline {
+    width: 100%; }
+  #welcome-titles #welcome-title {
+    font-size: 2rem;
+    line-height: 4rem; }
+  #welcome-titles #welcome-subtitle {
+    font-size: 1.4rem; } }

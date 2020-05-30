@@ -12,7 +12,7 @@ class galleryUI {
     photos.forEach(photo => {
       galleryOverviewPhotos += `
       <div class="gallery-thumbnail" value="${photos.indexOf(photo)}">
-      <img src="/dist/img/gallery/${photo}" alt="${photo}" id="${photo}"
+      <img src="/dist/img/gallery/thumbnails/${photo}" alt="${photo}" id="${photo}"
       />
       </div>
       `

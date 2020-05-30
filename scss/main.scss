@@ -105,9 +105,9 @@ h2 {
   display: flex;
   flex-direction: column;
   z-index: 2;
-  min-height: 4rem;
-  height: 4rem;
-  max-height: 4rem;
+  min-height: 3rem;
+  height: 3rem;
+  max-height: 3rem;
 
   background: $backgroundDarkColor;
 }
@@ -116,30 +116,29 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 4rem;
-  height: 4rem;
-  max-height: 4rem;
+  min-height: 3rem;
+  height: 3rem;
+  max-height: 3rem;
   z-index: 2;
   background: $backgroundDarkColor;
   border-bottom: 2px solid $backgroundComplementaryColor;
 }
 
 #main-nav-mobile-burger-menu {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-left: 2rem;
   cursor: pointer;
 }
 
 #burger-container {
-  top: 30px;
+  top: 20px;
   position: absolute;
 
   #burger-toggler {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: -20px;
     z-index: 2;
     opacity: 0;
   }
@@ -148,7 +147,7 @@ h2 {
 #burger {
   position: absolute;
   border: none;
-  width: 50px;
+  width: 40px;
   height: 4px;
 
 
@@ -156,7 +155,7 @@ h2 {
     content: "";
     position: absolute;
     top: -10px;
-    width: 50px;
+    width: 40px;
     height: 4px;
 
   }
@@ -165,7 +164,7 @@ h2 {
     content: "";
     position: absolute;
     top: 10px;
-    width: 50px;
+    width: 40px;
     height: 4px;
 
   }
@@ -219,7 +218,7 @@ h2 {
 }
 
 #welcome-background {
-  margin-top: -70px;
+  margin-top: -3rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
