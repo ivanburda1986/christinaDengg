@@ -620,6 +620,22 @@ footer {
     justify-content: center;
     width: 80%;
     text-align: center; }
+  #performance-showcases {
+    cursor: pointer; }
+    #performance-showcases .performance-showcase-background {
+      background: rgba(0, 0, 0, 0.2); }
+    #performance-showcases .performance-showcase-text {
+      opacity: 1; }
+    #performance-showcases .space-between {
+      height: 0px; }
+    #performance-showcases .space-under {
+      height: 10px; }
+    #performance-showcases .performance-showcase-btn {
+      cursor: pointer;
+      opacity: 1; }
+    #performance-showcases .performance-showcase-btn {
+      background: rgba(255, 255, 255, 0.7);
+      color: black; }
   #video-container {
     width: 100vw;
     height: 80vh;
