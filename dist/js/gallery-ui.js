@@ -12,7 +12,7 @@ class galleryUI {
     photos.forEach(photo => {
       galleryOverviewPhotos += `
       <div class="gallery-thumbnail" value="${photos.indexOf(photo)}">
-      <img src="/dist/img/gallery/thumbnails/${photo}" alt="${photo}" id="${photo}"
+      <img src="img/gallery/thumbnails/${photo}" alt="${photo}" id="${photo}"
       />
       </div>
       `
@@ -26,7 +26,7 @@ class galleryUI {
   }
 
   showFullPhoto(fullPhotoName) {
-    this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/${fullPhotoName}" alt="${fullPhotoName}" class="gallery-full-photo" id="${fullPhotoName}"/>`;
+    this.fullPhotoContainer.innerHTML = `<img src="img/gallery/${fullPhotoName}" alt="${fullPhotoName}" class="gallery-full-photo" id="${fullPhotoName}"/>`;
   }
 
   showNextFullPhoto(currentFullPhotoNumber, ultimatePhotoNumber) {
@@ -37,7 +37,7 @@ class galleryUI {
       nextPhotoNumber = currentFullPhotoNumber + 1;
     }
 
-    this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${nextPhotoNumber}.jpg" alt="photo${nextPhotoNumber}.jpg" class="gallery-full-photo" id="photo${nextPhotoNumber}.jpg"/>`;
+    this.fullPhotoContainer.innerHTML = `<img src="img/gallery/photo${nextPhotoNumber}.jpg" alt="photo${nextPhotoNumber}.jpg" class="gallery-full-photo" id="photo${nextPhotoNumber}.jpg"/>`;
     console.log(`This is photo number:${nextPhotoNumber}`);
   }
 
@@ -49,7 +49,7 @@ class galleryUI {
       previousPhotoNumber = currentFullPhotoNumber - 1;
     }
     console.log(`This is photo number:${previousPhotoNumber}`);
-    this.fullPhotoContainer.innerHTML = `<img src="/dist/img/gallery/photo${previousPhotoNumber}.jpg" alt="photo${previousPhotoNumber}.jpg" class="gallery-full-photo" id="photo${previousPhotoNumber}.jpg"/>`;
+    this.fullPhotoContainer.innerHTML = `<img src="img/gallery/photo${previousPhotoNumber}.jpg" alt="photo${previousPhotoNumber}.jpg" class="gallery-full-photo" id="photo${previousPhotoNumber}.jpg"/>`;
 
   }
 
