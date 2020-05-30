@@ -20,7 +20,7 @@ document.getElementById("burger-toggler").addEventListener("click", (e) => {
 //Dynamic highlighting in the horizontal navigation
 window.addEventListener('scroll', () => {
   let windowInnerWidth = window.innerWidth;
-  if (windowInnerWidth <= 700) {
+  if (windowInnerWidth <= 768) {
     navigationLinkHighlighting("nav-mobile-welcome", "section-welcome");
     navigationLinkHighlighting("nav-mobile-christina", "section-christina");
     navigationLinkHighlighting("nav-mobile-performance", "section-performance");
