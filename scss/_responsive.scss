@@ -158,9 +158,11 @@
 
   //Performance
 
+
+
+
   #performance-showcases {
     cursor: pointer;
-
 
     .performance-showcase-background {
       background: rgba(0, 0, 0, 0.2);
@@ -282,12 +284,15 @@
   //Welcome
   #welcome-titles {
     #welcome-title {
-      font-size: 2rem;
+      font-size: 2.25rem;
       line-height: 4rem;
     }
 
     #welcome-subtitle {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding-top: 1rem;
+      font-weight: 1000;
     }
   }
 }
