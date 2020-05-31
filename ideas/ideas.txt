@@ -124,7 +124,6 @@ Additional
 
 -add real content (the videos should be hosted on vimeo)
 -host on netlify with an .eu domain from wedos
--make the gallery and video overlays modulas, so that I can re-use them in other projects
 
 
 
