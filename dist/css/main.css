@@ -682,8 +682,9 @@ footer {
   .section-headline {
     width: 100%; }
   #welcome-titles #welcome-title {
-    font-size: 2.25rem;
-    line-height: 4rem; }
+    font-size: 2.5rem;
+    line-height: 3rem;
+    padding-top: 0.5rem; }
   #welcome-titles #welcome-subtitle {
     font-size: 1.8rem;
     line-height: 2rem;
