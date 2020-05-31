@@ -48,11 +48,11 @@
 //Mobile navigation slide-in;
 .anim-slideToScreen-startState {
   @include transition-littleTime;
-  transform: translateY(-500px);
+  transform: translateY(-300px);
 }
 
 .anim-slideToScreen-endState {
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
 //Burger menu on-toggler

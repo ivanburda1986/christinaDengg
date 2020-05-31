@@ -17,7 +17,8 @@
 #section-christina, #section-performance, #section-gallery {
   display: flex;
   height: 100%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  justify-content: center; }
   #section-christina .content-canvas, #section-performance .content-canvas, #section-gallery .content-canvas {
     height: 100%;
     min-height: 100%; }
@@ -115,10 +116,10 @@
 
 .anim-slideToScreen-startState {
   transition: all 0.5s ease-in-out;
-  transform: translateY(-500px); }
+  transform: translateY(-300px); }
 
 .anim-slideToScreen-endState {
-  transform: translateY(0px); }
+  transform: translateY(0); }
 
 .burger-animate-startState {
   transition: all 0.5s ease-in-out;
@@ -346,26 +347,24 @@ h2 {
   #nav-social-icons button:hover {
     color: #900000; }
 
-#main-nav-mobile-menu-options {
-  border-bottom: 2px solid #2e2c2cf3;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 0; }
-  #main-nav-mobile-menu-options ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto; }
-    #main-nav-mobile-menu-options ul li {
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      padding: 1rem 1.5rem;
-      text-align: center; }
-    #main-nav-mobile-menu-options ul a {
-      padding: 10px 20px; }
-      #main-nav-mobile-menu-options ul a:hover {
-        color: #900000; }
-      #main-nav-mobile-menu-options ul a.current {
-        color: #900000; }
+#main-nav-mobile-menu-options ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid #2e2c2cf3; }
+  #main-nav-mobile-menu-options ul li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    text-align: center; }
+  #main-nav-mobile-menu-options ul a {
+    padding: 10px 20px; }
+    #main-nav-mobile-menu-options ul a:hover {
+      color: #900000; }
+    #main-nav-mobile-menu-options ul a.current {
+      color: #900000; }
 
 #section-welcome {
   background: url("../img/backgrounds/frontpage-background-landscape-v1.png") no-repeat center center/cover; }

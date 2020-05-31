@@ -181,14 +181,16 @@ h2 {
 }
 
 #main-nav-mobile-menu-options {
-  border-bottom: 2px solid $backgroundComplementaryColor;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 0;
+
+
+
 
   ul {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid $backgroundComplementaryColor;
 
     li {
       font-family: $UIfont;
@@ -210,6 +212,7 @@ h2 {
       }
     }
   }
+
 }
 
 //Welcome

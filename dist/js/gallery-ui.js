@@ -61,7 +61,6 @@ class galleryUI {
     this.currentFullPhotoDescription.innerHTML = ``;
   }
 
-
   hideGalleryOverlay() {
     this.galleryOverlay.classList.add("hide");
   }

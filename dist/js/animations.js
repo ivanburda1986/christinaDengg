@@ -1,3 +1,8 @@
+//UI Selectors
+const mobileNavigation = document.getElementById("main-nav-mobile-menu-options");
+const burgerToggler = document.getElementById("burger-toggler");
+const burger = document.getElementById("burger");
+
 //WELCOME - TITLES
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById("welcome-title").classList.add("anim-slideDown-endState");
@@ -5,17 +10,29 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 //NAVIGATION
-document.getElementById("burger-toggler").addEventListener("click", (e) => {
-  console.log(e.srcElement.checked);
+burgerToggler.addEventListener("click", (e) => {
   if (e.srcElement.checked) {
-    document.getElementById("main-nav-mobile-menu-options").classList.add("anim-slideToScreen-endState");
-    document.getElementById("burger").classList.add("burger-animate-endState");
+    mobileNavigation.classList.add("anim-slideToScreen-endState");
+    burger.classList.add("burger-animate-endState");
 
   } else {
-    document.getElementById("main-nav-mobile-menu-options").classList.remove("anim-slideToScreen-endState");
-    document.getElementById("burger").classList.remove("burger-animate-endState");
+    mobileNavigation.classList.remove("anim-slideToScreen-endState");
+    burger.classList.remove("burger-animate-endState");
   }
 })
+
+//Closing the mobile nav if the user clicks outside of it
+let windowInnerWidth = window.innerWidth;
+if (windowInnerWidth <= 1024) {
+  document.addEventListener("click", (e) => {
+    let mobileNavigationBottomValueYAxis = mobileNavigation.getBoundingClientRect().bottom;
+    if (mobileNavigationBottomValueYAxis > 0 && e.clientY > mobileNavigationBottomValueYAxis) {
+      mobileNavigation.classList.remove("anim-slideToScreen-endState");
+      burger.classList.remove("burger-animate-endState");
+      burgerToggler.checked = false;
+    }
+  })
+}
 
 //Dynamic highlighting in the horizontal navigation
 window.addEventListener('scroll', () => {
