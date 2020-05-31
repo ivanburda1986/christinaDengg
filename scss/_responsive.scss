@@ -157,12 +157,15 @@
   }
 
   //Performance
-
-
-
-
   #performance-showcases {
     cursor: pointer;
+
+    .performance-showcase:hover {
+      .performance-showcase-background {
+        background: rgba(0, 0, 0, 0.2);
+        ;
+      }
+    }
 
     .performance-showcase-background {
       background: rgba(0, 0, 0, 0.2);
@@ -191,6 +194,13 @@
       color: black;
     }
   }
+
+  // .performance-showcase:hover {
+  //   .performance-showcase-background {
+  //     transition-property: none;
+  //   }
+  // }
+
 
   #video-container {
     width: 100vw;

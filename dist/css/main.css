@@ -623,6 +623,8 @@ footer {
     text-align: center; }
   #performance-showcases {
     cursor: pointer; }
+    #performance-showcases .performance-showcase:hover .performance-showcase-background {
+      background: rgba(0, 0, 0, 0.2); }
     #performance-showcases .performance-showcase-background {
       background: rgba(0, 0, 0, 0.2); }
     #performance-showcases .performance-showcase-text {
