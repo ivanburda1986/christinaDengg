@@ -364,7 +364,7 @@ h2 {
       color: #900000; }
 
 #section-welcome {
-  background: url("../img/backgrounds/frontpage-background-landscape-v1.png") no-repeat center center/cover; }
+  background: url("../img/backgrounds/background-horizontal-0.jpg") no-repeat center center/cover; }
 
 #welcome-background {
   margin-top: -3rem;
@@ -569,7 +569,7 @@ footer {
 
 @media screen and (max-width: 1024px) {
   #section-welcome {
-    background: url("../img/backgrounds/frontpage-background-vertical-v3.png") no-repeat center center/cover; }
+    background: url("../img/backgrounds/background-vertical-0.jpg") no-repeat center center/cover; }
   .container {
     max-width: 85vw;
     margin-left: 7.5vw;
